@@ -37,7 +37,7 @@ export function showErrorNotification(message) {
 }
 
 export function smoothScroll() {
-  // TODO smooth scroll for pagination
+  // TODO smooth scroll for pagination (if needed)
 
 	window.scrollBy({
 		top: 0, // TODO
