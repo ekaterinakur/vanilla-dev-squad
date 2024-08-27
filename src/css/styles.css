@@ -1,0 +1,22 @@
+@import 'node_modules/modern-normalize/modern-normalize.css';
+@import './font.css';
+@import './variables.css';
+
+body {
+  font-family: 'DMSans', sans-serif;
+  font-size: 16px;
+  color: var(--primary);
+  background-color: var(--primary-light);
+  line-height: 1.125;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--main-padding);
+}
+
+.hidden {
+  display: none;
+}
