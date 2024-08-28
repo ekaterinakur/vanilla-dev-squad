@@ -1,5 +1,112 @@
 .footer {
-    background-color: #242424;
+    background-color: var(--primary);;
     padding-top: 40px;
     padding-bottom: 20px;
+  }
+
+ @media screen and (min-width: 768px) {
+    .footer {
+      padding-top: 64px;
+      padding-bottom: 16px;
+    }
+  }
+
+  .footer .container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0;
+    max-width: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer .container{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+  }
+
+  .footer-wrap {
+    margin: 0;
+    max-width: 375px;
+  }
+.footer-nav-wrapper {
+    max-width: 375px;
+}
+
+  .footer-soc-list {
+    margin-top: 20px;
+    margin-bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding-left: 0;
+  }
+
+  .footer-soc-link {
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid rgba(244, 244, 244, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition);
+  }
+  .footer-soc-icon {
+    fill: var(--primary-light);
+    opacity: 0.8;
+    transition: fill var(--transition);
+  }
+  
+  .footer-soc-link:hover,
+  .footer-soc-link:focus {
+    background-color: var(--primary-light);
+    border-color: var(--primary);
+  }
+
+  .footer-soc-link:hover .footer-soc-icon,
+  .footer-soc-link:focus .footer-soc-icon {
+    fill: var(--primary);
+    opacity: 0.8;
+  }
+
+  .footer-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: var(--primary-light);
+    font-size: 38px;
+    font-style: normal ;
+    font-weight: 400;
+    line-height: 44px; 
+    letter-spacing: -2%;
+  }
+
+  .footer-title-span {
+    color: var(--primary-light);
+    font-size: 38px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 44px;
+    letter-spacing: -2%;
+  }
+
+.footer-form {
+  max-width: 335px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-form-title {
+    color: var(--primary-light);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px; 
+  }
+
+  @media screen and (min-width: 768px) {
+    .footer-form-title {
+      font-size: 18px;
+    }
   }
