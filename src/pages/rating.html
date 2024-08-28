@@ -1,0 +1,66 @@
+<button id="giveRatingBtn">Give a rating</button>
+
+<div id="ratingModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeRatingModal">&times;</span>
+    <h2 class="rating-title">Rating</h2>
+    <div class="rating-value">
+      <span id="currentRating">0.0</span>
+      <div class="stars">
+        <input type="radio" name="rating" value="1" id="star5" /><label
+          for="star1"
+          >★</label
+        >
+        <input type="radio" name="rating" value="2" id="star4" /><label
+          for="star2"
+          >★</label
+        >
+        <input type="radio" name="rating" value="3" id="star3" /><label
+          for="star3"
+          >★</label
+        >
+        <input type="radio" name="rating" value="4" id="star2" /><label
+          for="star4"
+          >★</label
+        >
+        <input type="radio" name="rating" value="5" id="star1" /><label
+          for="star5"
+          >★</label
+        >
+      </div>
+    </div>
+    <form id="ratingForm">
+      <div class="input-group">
+        <label for="email"></label>
+        <input
+          class="input-email"
+          type="email"
+          name="email"
+          required
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          placeholder="Email"
+        />
+      </div>
+      <div class="input-group">
+        <label for="description"></label>
+        <textarea
+          id="description"
+          name="description"
+          required
+          placeholder="Your comment"
+        ></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send</button>
+    </form>
+  </div>
+</div>
+
+<div id="exerciseModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeExerciseModal">&times;</span>
+    <h2>Exercise</h2>
+    <p>Content of the exercise goes here.</p>
+  </div>
+</div>
+
+<div id="notification" class="notification"></div>
