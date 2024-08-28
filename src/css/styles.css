@@ -1,6 +1,7 @@
 @import 'node_modules/modern-normalize/modern-normalize.css';
 @import './font.css';
 @import './variables.css';
+@import './footer.css';
 
 body {
   font-family: 'DMSans', sans-serif;
