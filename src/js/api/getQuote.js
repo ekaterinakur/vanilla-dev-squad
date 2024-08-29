@@ -1,12 +1,9 @@
-import client from './client';
+import axios from 'axios';
 
 // TODO
 export async function getQuote() {
-  try {
-    const response = await client.get('quote');
-
-    return response.data;
-  } catch (error) {
-    throw new Error(error.response?.status || error.message);
-  }
+  const response = await axios.get(
+    `https://your-energy.b.goit.study/api/quote`
+  );
+  return response.data;
 }

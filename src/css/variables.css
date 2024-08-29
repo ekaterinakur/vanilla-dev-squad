@@ -1,10 +1,11 @@
 :root {
-  --primary: #242424;  /** texts on libgt bg, bgs */
+  	--primary: #242424;  /** texts on libgt bg, bgs */
 	--primary-disabled: rgba(36, 36, 36, .1);  /** disabled pagination btns ... */
 	--primary-inactive: #D4D4D4; /** inactive pages ... */
 	--primary-light: #F4F4F4; /** light bg, text color on dark bg */
 	--primary-light-inactive: rgba(244, 244, 244, .2); /** not selected star */
 	--gold: #EEA10C; /** selected star */
+
 
 	/* Borders */
 	--border-radius-lg: 30px;
