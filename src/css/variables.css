@@ -14,9 +14,6 @@
 	/* Spaces */
 	--main-padding: 1.25rem;
 
-	/* Transition */
-	--transition: 300ms linear;
-
 	/* Breackpoints */
   --breakpoint-sm: 375px;
   --breakpoint-md: 768px;
