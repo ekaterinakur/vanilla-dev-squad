@@ -4,13 +4,6 @@
     padding-bottom: 20px;
   }
 
- @media screen and (min-width: 768px) {
-    .footer {
-      padding-top: 64px;
-      padding-bottom: 16px;
-    }
-  }
-
   .footer .container {
     padding-left: 20px;
     padding-right: 20px;
@@ -18,13 +11,6 @@
     padding-bottom: 0;
     margin: 0;
     max-width: none;
-  }
-
-  @media screen and (min-width: 768px) {
-    .footer .container{
-        padding-left: 32px;
-        padding-right: 32px;
-    }
   }
 
   .footer-wrap {
@@ -42,6 +28,7 @@
     align-items: flex-start;
     gap: 12px;
     padding-left: 0;
+    list-style: none;
   }
 
   .footer-soc-link {
@@ -171,3 +158,104 @@
     color: #C6CDD1;
     opacity: 0.9;
   }
+
+  /* Tablet version */
+
+  @media screen and (min-width: 768px) {
+    .footer {
+      padding-top: 64px;
+      padding-bottom: 16px;
+    }
+
+    .footer .container{
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .footer-wrap {
+        display: flex;
+        max-width: 704px;
+      }
+
+    .footer-nav-wrapper {
+        justify-content: space-between;
+        display: flex;
+        max-width: 704px;
+      }
+
+    .footer-soc-list {
+        margin-top: 32px;
+    }
+    
+    .footer-soc-icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .footer-logo-wrap {
+        margin-right: 114px;
+    }
+    .footer-title-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 32px;
+    }
+
+    .footer-title {
+        max-width: 448px;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 56px;
+        line-height: 60px;
+        letter-spacing: -0.02em;
+      }
+
+      .footer-title-span {
+        font-size: 56px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 60px;
+        letter-spacing: -0.02em;
+      }
+
+    .footer-form{
+        margin-top: 0;
+    }
+      .copyright-wrapper {
+        flex-direction: row;
+      }
+
+      .footer-copyright {
+        display: flex;
+        justify-content: space-between;
+      }
+    
+      .copyright-text {
+        margin-bottom: 0;
+        margin-right: 78px;
+      }
+
+
+
+  }
+
+  /* Desktop version */
+
+  @media screen and (min-width: 1440px) {
+
+  .footer {
+    padding-bottom: 32px;
+}
+
+  .footer-nav-wrapper {
+    justify-content: unset;
+    gap: 158px;
+  }
+
+  .footer-title-wrapper {
+    flex-direction: row;
+    gap: 115px;
+  }
+
+}
