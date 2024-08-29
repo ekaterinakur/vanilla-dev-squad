@@ -6,3 +6,9 @@ const client = axios.create({
 });
 
 export default client;
+
+
+export const API_PROPERTIES = Object.freeze({
+  BASE_URL: 'https://your-energy.b.goit.study/api',
+  SUBSCRIPTION: '/subscription',
+});

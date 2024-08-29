@@ -1,4 +1,4 @@
-import { API_PROPERTIES } from '../api/client';
+import { API_PROPERTIES } from '../api/client.js';
 import axios from 'axios';
 
 const { BASE_URL, SUBSCRIPTION } = API_PROPERTIES;

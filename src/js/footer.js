@@ -1,6 +1,6 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import { postSubscription } from './api-service/subscription-api';
+import { postSubscription } from './api/client.js';
 
 const elements = {
   form: document.querySelector('.subscribe__form'),
