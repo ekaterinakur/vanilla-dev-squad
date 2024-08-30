@@ -1,16 +1,20 @@
 // TODO listeners for actions
 
-// Header Burger menu
-const toggleButtons = document.querySelectorAll('.js-toggle-menu');
-const navMenu = document.querySelector('.js-header-menu');
+// Header Importing event handlers
+import { handleMenuToggle } from './js/eventHandlers/headerMenuHandlers.js';
 
+// Header Setting up event listeners
+// const menuButton = document.querySelector('.js-toggle-menu');
+// menuButton.addEventListener('click', handleMenuToggle);
+
+const toggleButtons = document.querySelectorAll('.js-toggle-menu');
 toggleButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    const isExpanded = button.getAttribute('aria-expanded') === 'true';
-    toggleButtons.forEach(btn =>
-      btn.setAttribute('aria-expanded', !isExpanded)
-    );
-    navMenu.classList.toggle('open');
-  });
+  button.addEventListener('click', handleMenuToggle);
 });
-// Header Burger menu
+
+// Header Listening for window resize events
+window.addEventListener('resize', () => {
+  if (window.innerWidth >= 768) {
+    handleMenuToggle(false); // Close menu on larger screens
+  }
+});
