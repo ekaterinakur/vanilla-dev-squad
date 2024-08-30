@@ -1,6 +1,8 @@
-@import 'node_modules/modern-normalize/modern-normalize.css';
+@import 'modern-normalize/modern-normalize.css';
 @import './font.css';
 @import './variables.css';
+@import './reset.css';
+@import './header.css';
 
 body {
   font-family: 'DMSans', sans-serif;
@@ -8,6 +10,7 @@ body {
   color: var(--primary);
   background-color: var(--primary-light);
   line-height: 1.125;
+  overflow-x: hidden;
 }
 
 .container {
