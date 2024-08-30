@@ -1,3 +1,5 @@
+@import 'izitoast/dist/css/iziToast.min.css';
+
 .modal {
   display: none;
   position: fixed;
@@ -11,21 +13,22 @@
 }
 
 .modal-content {
-  background-color: #333;
+  background-color: #242424;
   margin: 15% auto;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 0 40px;
+  border-radius: 20px;
   width: 80%;
-  max-width: 400px;
+  max-width: 430px;
   color: white;
   position: relative;
 }
 
 .close {
-  color: #aaa;
+  color: rgba(244, 244, 244);
   float: right;
   font-size: 28px;
-  font-weight: bold;
+  margin-top: 5px;
+  margin-right: -24px;
 }
 
 .close:hover,
@@ -37,8 +40,10 @@
 
 .rating-title {
   text-align: start;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 12px;
+  padding-top: 40px;
+  margin-bottom: 8px;
+  color: rgba(244, 244, 244, 0.4);
 }
 
 .rating-value {
@@ -46,12 +51,11 @@
   justify-content: start;
   align-items: center;
   font-size: 24px;
-  margin-bottom: 20px;
 }
 
 .stars {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   margin-left: 10px;
 }
 
@@ -60,19 +64,20 @@
 }
 
 .stars label {
-  font-size: 20px;
+  font-size: 24px;
   color: gray;
   cursor: pointer;
 }
 
-.stars input[type='radio']:checked ~ label,
 .stars label:hover,
-.stars label:hover ~ label {
+.stars label:hover ~ label,
+.stars input[type='radio']:checked ~ label {
   color: gold;
 }
 
-.input-group {
-  margin-bottom: 20px;
+.stars input[type='radio']:checked + label,
+.stars input[type='radio']:checked + label ~ label {
+  color: gold;
 }
 
 .input-group label {
@@ -87,8 +92,10 @@
   border-radius: 40px;
   border: 1px solid #ccc;
   background-color: #444;
-  color: white;
+  color: rgba(244, 244, 244, 0.6);
   font-size: 14px;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 
 .input-group textarea {
@@ -108,15 +115,26 @@
 
 .submit-btn {
   width: 100%;
-  padding: 10px;
+  padding: 12px;
+
   border: none;
   border-radius: 40px;
   background-color: #fff;
-  color: #333;
+  color: rgb(36, 36, 36);
   font-size: 16px;
   cursor: pointer;
+  margin-top: 32px;
+  margin-bottom: 40px;
 }
 
 .submit-btn:hover {
   background-color: #ddd;
+}
+.exercise-title {
+  font-size: 18px;
+  padding-top: 20px;
+}
+.exercise-description {
+  font-size: 14px;
+  padding-bottom: 20px;
 }

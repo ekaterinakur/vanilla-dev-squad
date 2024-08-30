@@ -1,6 +1,5 @@
 import client from './client';
 import iziToast from 'izitoast';
-import 'izitoast/dist/css/iziToast.min.css';
 
 export const initializeRating = () => {
   const giveRatingBtn = document.getElementById('giveRatingBtn');
@@ -37,28 +36,52 @@ export const initializeRating = () => {
 
     const email = event.target.elements.email.value.trim();
     const description = event.target.elements.description.value.trim();
+    const formData = new FormData(ratingForm);
+    const rating = formData.get('rating');
 
     event.target.elements.email.value = '';
     event.target.elements.description.value = '';
 
     if (!ratingForm.checkValidity()) {
+      ratingModal.style.display = 'none';
+      exerciseModal.style.display = 'block';
+
       return;
     }
 
-    const formData = new FormData(ratingForm);
-    const rating = formData.get('rating');
-    const exerciseId = 'EXERCISE_ID';
+    const exerciseId = '64f389465ae26083f39b17a4';
+    const requestData = {
+      rate: rating,
+      email: email,
+      review: description,
+    };
 
     try {
-      const response = await client.post(`exercises/${exerciseId}/rating`, {
-        rate: rating,
-        email: email,
-        review: description,
-      });
+      const response = await client.post(
+        `exercises/${exerciseId}/rating`,
+        requestData,
+        {
+          rate: rating,
+          email: email,
+          review: description,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
+
+      console.log('Server Response:', response);
 
       if (response.status === 200) {
         ratingModal.style.display = 'none';
         exerciseModal.style.display = 'block';
+
+        setTimeout(() => {
+          exerciseModal.style.display = 'none';
+        }, 3000);
+
         iziToast.success({
           title: 'Success',
           message: 'Rating submitted successfully!',
@@ -66,6 +89,7 @@ export const initializeRating = () => {
         });
       }
     } catch (error) {
+      console.error('Error in server request:', error);
       let errorMessage = 'An error occurred';
 
       if (error.response) {
