@@ -86,10 +86,6 @@
   align-items: center;
 }
 
-.filter-buttons {
-  margin-top: 32px;
-}
-
 .filter-list {
   display: grid;
   grid-template-columns: 335px;
@@ -117,6 +113,19 @@
 
 .filter-img {
   border-radius: 12px;
+  transition-property: transform;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-btn:hover .filter-img,
+.filter-btn:focus .filter-img {
+  transform: scale(1.05);
+}
+
+.filter-btn:hover .filter-overlay,
+.filter-btn:focus .filter-overlay {
+  transform: scale(1.05);
 }
 
 @media only screen and (min-width: 1440px) {
@@ -133,6 +142,9 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 12px;
+  transition-property: transform;
+  transition-duration: 350ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-name {
@@ -185,6 +197,10 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .filter-buttons {
+    margin-top: 32px;
+  }
+
   .pagination-btn {
     font-size: 24px;
     width: 14px;
@@ -270,11 +286,11 @@
   }
 }
 
-.womans-img {
+.women-section {
   margin-top: 20px;
 }
 
-.womans-img > img {
+.women-picture > img {
   width: 444px;
   border-radius: 20px;
 }
@@ -371,7 +387,7 @@
     margin-top: 64px;
   }
 
-  .womans-img {
+  .women-section {
     grid-area: womans;
     margin-top: 64px;
     margin-left: 16px;
@@ -410,7 +426,7 @@
     margin-top: 0;
   }
 
-  .womans-img {
+  .women-section {
     grid-area: womans;
     margin: 0;
   }

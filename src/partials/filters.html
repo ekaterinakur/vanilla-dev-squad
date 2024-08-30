@@ -56,15 +56,30 @@
       </div>
     </div>
 
-    <div class="womans-img">
-      <img
-        srcset="../img/filters/women.jpg 1x, ../img/filters/women@2x.jpg 2x"
-        src="../img/filters/women.jpg"
-        alt="Sport womans"
-        width="444"
-        height="242"
-        loading="lazy"
-      />
+    <div class="women-section">
+      <picture class="women-picture">
+        <source
+          media="(min-width: 1440px)"
+          srcset="
+            ../img/filters/women_des.jpg    1x,
+            ../img/filters/women_des@2x.jpg 2x
+          "
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ../img/filters/women_pla.jpg    1x,
+            ../img/filters/women_pla@2x.jpg 2x
+          "
+        />
+        <img
+          srcset="
+            ../img/filters/women_mob.jpg    1x,
+            ../img/filters/women_mob@2x.jpg 2x
+          "
+          alt="sport-women"
+        />
+      </picture>
     </div>
 
     <div class="daily-time">
