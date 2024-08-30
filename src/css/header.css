@@ -160,6 +160,7 @@
 
   .header-socials-links {
     fill: rgba(36, 36, 36, 0.8);
+    border: 1px solid rgba(36, 36, 36, 0.1);
   }
 
   .header-socials-links:hover {
