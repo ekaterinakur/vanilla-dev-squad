@@ -1,20 +1,25 @@
 // TODO listeners for actions
 
 // Header Importing event handlers
-import { handleMenuToggle } from './js/eventHandlers/headerMenuHandlers.js';
+import {
+  handleMenuToggle,
+  addButtonListeners as addHeaderMenuButtonListeners,
+  removeButtonListeners as removeHeaderMenuButtonListeners,
+} from './js/eventHandlers/headerMenuHandlers.js';
 
 // Header Setting up event listeners
-// const menuButton = document.querySelector('.js-toggle-menu');
-// menuButton.addEventListener('click', handleMenuToggle);
+addHeaderMenuButtonListeners();
 
-const toggleButtons = document.querySelectorAll('.js-toggle-menu');
-toggleButtons.forEach(button => {
-  button.addEventListener('click', handleMenuToggle);
-});
+// Get variable --breakpoint-md from variables.css:root
+const rootStyles = getComputedStyle(document.documentElement);
+const breakpointMd = rootStyles.getPropertyValue('--breakpoint-md').trim();
 
-// Header Listening for window resize events
+// Header Listening for window resize events - hide burger menu on larger screens
 window.addEventListener('resize', () => {
-  if (window.innerWidth >= 768) {
-    handleMenuToggle(false); // Close menu on larger screens
+  if (window.innerWidth >= breakpointMd) {
+    handleMenuToggle(false); // Hide menu on larger screens
+    removeHeaderMenuButtonListeners();
+  } else {
+    addHeaderMenuButtonListeners();
   }
 });
