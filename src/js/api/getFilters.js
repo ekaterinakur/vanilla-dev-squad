@@ -1,9 +1,14 @@
-import axios from 'axios';
+import client from './client';
 
 // TODO
-export async function getFilters(param) {
-  const response = await axios.get(
-    `https://your-energy.b.goit.study/api/filters?${param}`
-  );
-  return response.data;
+export async function getFilters(params) {
+  try {
+    const response = await client.get('filters', {
+      params,
+    });
+
+    return response.data;
+  } catch (error) {
+    throw new Error(error.response?.status || error.message);
+  }
 }

@@ -1,7 +1,7 @@
 // TODO listeners for actions
-import { filterSizeDepends } from './js/base/filters';
-import { filterQuoteLS } from './js/base/filters';
-import { changeFilter } from './js/base/filters';
+import { filterSizeDepends } from './js/rendering/filtersRender';
+import { filterQuoteLS } from './js/eventHandlers/filtersHandlers';
+import { changeFilter } from './js/eventHandlers/filtersHandlers';
 
 const navFilter = document.querySelector('.main-nav');
 

@@ -1,9 +1,14 @@
 import { getFilters } from '../api/getFilters';
-import { filtersParam } from '../base/filters';
 
 const quoteSection = document.querySelector('.quote-text-wrapper');
 const imagesList = document.querySelector('.filter-list');
 const filterBtns = document.querySelector('.filter-buttons');
+
+export const filtersParam = {
+  filter: 'Muscles',
+  page: 1,
+  limit: null,
+};
 
 export function renderImg(imagesData) {
   const markUp = imagesData.results
@@ -44,9 +49,9 @@ export function renderBtn(imagesData) {
     button.addEventListener('click', async () => {
       filtersParam.page = button.dataset.page;
       imagesList.innerHTML = '';
-      await getFilters(new URLSearchParams(filtersParam)).then(imagesData => {
-        renderImg(imagesData);
-      });
+      const filtersData = await getFilters(filtersParam);
+      renderImg(filtersData);
+      window.scrollTo(0, 0);
 
       paginationsBtn.forEach(btn => btn.classList.remove('active'));
       button.classList.add('active');
@@ -60,4 +65,32 @@ export function renderQuote(quoteData) {
     <p class="quote-author">${quoteData.author}</p>
     `;
   quoteSection.insertAdjacentHTML('beforeend', quoteMarkUp);
+}
+
+export function decorateFilter(event) {
+  const navBtn = document.querySelectorAll('.nav-btn');
+  navBtn.forEach(btn => btn.classList.remove('decorated'));
+  event.target.classList.add('decorated');
+}
+
+export async function filterSizeDepends() {
+  const windowWidth = window.innerWidth;
+  let tempLimit = null;
+
+  if (windowWidth < 768) {
+    tempLimit = 9;
+  } else if (windowWidth > 1439) {
+    tempLimit = 12;
+  } else {
+    tempLimit = 9;
+  }
+
+  if (tempLimit !== filtersParam.limit) {
+    filtersParam.limit = tempLimit;
+    imagesList.innerHTML = '';
+    filterBtns.innerHTML = '';
+    const filtersData = await getFilters(filtersParam);
+    renderImg(filtersData);
+    renderBtn(filtersData);
+  }
 }
