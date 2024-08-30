@@ -1,6 +1,6 @@
-@import 'node_modules/modern-normalize/modern-normalize.css';
 @import './font.css';
 @import './variables.css';
+@import './dialog.css';
 
 body {
   font-family: 'DMSans', sans-serif;
