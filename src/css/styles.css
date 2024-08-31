@@ -18,6 +18,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 .container {
   width: 100%;
   max-width: var(--container-max-width);
