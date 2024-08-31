@@ -21,13 +21,11 @@ function addButtonListeners() {
 }
 
 function toggleMenu() {
-  // const headerMenu = document.querySelector('.js-header-menu');
   headerMenu.classList.toggle('open');
 }
 
 // Event handler for toggling the mobile menu
 export function toggleHeaderEventListeners() {
-  // const headerMenu = document.querySelector('.js-header-menu');
   if (window.innerWidth >= breakpointMd) {
     headerMenu.classList.remove('open'); // Hide menu on larger screens
     removeButtonListeners();
