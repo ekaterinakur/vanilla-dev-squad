@@ -10,25 +10,48 @@
   height: 100%;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.6s ease-out;
 }
-
+.modal-closing {
+  background-color: rgba(0, 0, 0, 0);
+}
 .modal-content {
   background-color: #242424;
   margin: 15% auto;
-  padding: 0 40px;
+  padding: 0 20px;
   border-radius: 20px;
-  width: 80%;
+  width: 335px;
   max-width: 430px;
   color: white;
   position: relative;
+  animation: none;
+}
+.modal-content.dispersing {
+  animation: disperse 0.6s forwards;
+}
+
+@keyframes disperse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    transform: scale(1.2);
+    opacity: 0;
+    filter: blur(20px);
+  }
+}
+.current-rating {
+  font-size: 12px;
 }
 
 .close {
   color: rgba(244, 244, 244);
   float: right;
-  font-size: 28px;
+  font-size: 24px;
   margin-top: 5px;
-  margin-right: -24px;
+  margin-right: -8px;
 }
 
 .close:hover,
@@ -50,7 +73,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .stars {
@@ -64,7 +87,7 @@
 }
 
 .stars label {
-  font-size: 24px;
+  font-size: 18px;
   color: gray;
   cursor: pointer;
 }
@@ -88,40 +111,36 @@
 
 .input-email {
   width: 100%;
-  padding: 10px;
+  padding: 6px;
   border-radius: 40px;
   border: 1px solid #ccc;
   background-color: #444;
   color: rgba(244, 244, 244, 0.6);
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 32px;
   margin-bottom: 16px;
 }
 
 .input-group textarea {
   width: 100%;
-  padding: 10px;
+  padding: 6px;
   border-radius: 10px;
   border: 1px solid #ccc;
   background-color: #444;
   color: white;
   font-size: 14px;
-}
-
-.input-group textarea {
   resize: none;
   height: 100px;
 }
 
 .submit-btn {
   width: 100%;
-  padding: 12px;
-
+  padding: 8px;
   border: none;
   border-radius: 40px;
   background-color: #fff;
   color: rgb(36, 36, 36);
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
   margin-top: 32px;
   margin-bottom: 40px;
@@ -130,11 +149,91 @@
 .submit-btn:hover {
   background-color: #ddd;
 }
+
 .exercise-title {
-  font-size: 18px;
+  font-size: 14px;
   padding-top: 20px;
 }
+
 .exercise-description {
-  font-size: 14px;
+  font-size: 12px;
   padding-bottom: 20px;
+}
+
+/* Tablet view (>= 768px) */
+@media (min-width: 768px) {
+  .modal-content {
+    width: 430px;
+    margin: 15% auto;
+    padding: 0 40px;
+  }
+  .close {
+    margin-right: -24px;
+  }
+
+  .rating-title {
+    font-size: 14px;
+    padding-top: 40px;
+  }
+
+  .rating-value {
+    font-size: 20px;
+  }
+
+  .stars label {
+    font-size: 20px;
+  }
+
+  .input-group label {
+    font-size: 16px;
+  }
+
+  .input-email,
+  .input-group textarea {
+    font-size: 16px;
+    padding: 8px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+    padding: 10px;
+  }
+}
+
+/* Desktop view (>= 1024px) */
+@media (min-width: 1024px) {
+  .modal-content {
+    width: 80%;
+    max-width: 430px;
+    margin: 15% auto;
+    padding: 0 40px;
+  }
+
+  .rating-title {
+    font-size: 16px;
+    padding-top: 40px;
+  }
+
+  .rating-value {
+    font-size: 24px;
+  }
+
+  .stars label {
+    font-size: 24px;
+  }
+
+  .input-group label {
+    font-size: 16px;
+  }
+
+  .input-email,
+  .input-group textarea {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+    padding: 12px;
+  }
 }
