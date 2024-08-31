@@ -1,14 +1,6 @@
-import { getFilters } from '../api/getFilters';
-
 const quoteSection = document.querySelector('.quote-text-wrapper');
 const imagesList = document.querySelector('.filter-list');
 const filterBtns = document.querySelector('.pagination-section');
-
-export const filtersParam = {
-  filter: 'Muscles',
-  page: 1,
-  limit: null,
-};
 
 export function renderImg(imagesData) {
   const markUp = imagesData.results
@@ -29,41 +21,23 @@ export function renderImg(imagesData) {
   imagesList.insertAdjacentHTML('beforeend', markUp);
 }
 
-export function renderBtn(imagesData) {
+export function renderPagination(imagesData) {
+  let buttonsHTML = '';
   for (let i = 1; i <= imagesData.totalPages; i++) {
-    if (i === 1) {
-      filterBtns.insertAdjacentHTML(
-        'beforeend',
-        `<button type="submit" class="pagination-btn untreated active" data-page=${i}>${i}</button>`
-      );
-    } else {
-      filterBtns.insertAdjacentHTML(
-        'beforeend',
-        `<button type="submit" class="pagination-btn untreated" data-page=${i}>${i}</button>`
-      );
-    }
+    buttonsHTML += `
+      <button type="button" class="pagination-btn untreated${
+        i === 1 ? ' active' : ''
+      }" data-page=${i}>${i}</button>
+    `;
   }
-  const paginationsBtn = document.querySelectorAll('.pagination-btn');
-
-  paginationsBtn.forEach(button => {
-    button.addEventListener('click', async () => {
-      filtersParam.page = button.dataset.page;
-      imagesList.innerHTML = '';
-      const filtersData = await getFilters(filtersParam);
-      renderImg(filtersData);
-      window.scrollTo(0, 0);
-
-      paginationsBtn.forEach(btn => btn.classList.remove('active'));
-      button.classList.add('active');
-    });
-  });
+  filterBtns.insertAdjacentHTML('beforeend', buttonsHTML);
 }
 
 export function renderQuote(quoteData) {
   const quoteMarkUp = `
     <p class="quote-text">${quoteData.quote}</p>
     <p class="quote-author">${quoteData.author}</p>
-    `;
+  `;
   quoteSection.insertAdjacentHTML('beforeend', quoteMarkUp);
 }
 
@@ -73,24 +47,16 @@ export function decorateFilter(event) {
   event.target.classList.add('decorated');
 }
 
-export async function filterSizeDepends() {
-  const windowWidth = window.innerWidth;
-  let tempLimit = null;
-
-  if (windowWidth < 768) {
-    tempLimit = 9;
-  } else if (windowWidth > 1439) {
-    tempLimit = 12;
-  } else {
-    tempLimit = 9;
-  }
-
-  if (tempLimit !== filtersParam.limit) {
-    filtersParam.limit = tempLimit;
-    imagesList.innerHTML = '';
+export function resetFilterView(resetAll) {
+  imagesList.innerHTML = '';
+  if (resetAll) {
     filterBtns.innerHTML = '';
-    const filtersData = await getFilters(filtersParam);
-    renderImg(filtersData);
-    renderBtn(filtersData);
   }
+}
+
+export function updatePaginationView(button) {
+  const filterPaginationBtn = filterBtns.querySelectorAll('.pagination-btn');
+  filterPaginationBtn.forEach(btn => btn.classList.remove('active'));
+  button.classList.add('active');
+  window.scrollTo(0, 0);
 }
