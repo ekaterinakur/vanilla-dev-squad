@@ -22,12 +22,15 @@ function addButtonListeners() {
 
 function toggleMenu() {
   headerMenu.classList.toggle('open');
+  document.body.classList.toggle('no-scroll');
 }
 
 // Event handler for toggling the mobile menu
 export function toggleHeaderEventListeners() {
   if (window.innerWidth >= breakpointMd) {
+    //Hide mobile menu for larger screens
     headerMenu.classList.remove('open'); // Hide menu on larger screens
+    document.body.classList.remove('no-scroll');
     removeButtonListeners();
   } else {
     addButtonListeners();
