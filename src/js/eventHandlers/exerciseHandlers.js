@@ -4,6 +4,7 @@ import {
   getDialogTemplate,
   updateFavoritesButton,
 } from '../rendering/exerciseDialog';
+import { openRatingModal } from './ratingHandlers';
 
 let instance;
 const favoritesKey = 'favorites';
@@ -39,6 +40,9 @@ function addDialogListeners() {
 
   const favoritesBtn = document.getElementById('favoritesBtn');
   favoritesBtn.addEventListener('click', updateFavorites);
+
+  const ratingBtn = document.getElementById('giveRatingBtn');
+  ratingBtn.addEventListener('click', () => openRatingModal(exercise._id));
 }
 
 function removeDialogListeners() {
@@ -49,6 +53,9 @@ function removeDialogListeners() {
 
   const favoritesBtn = document.getElementById('favoritesBtn');
   favoritesBtn.removeEventListener('click', updateFavorites);
+
+  const ratingBtn = document.getElementById('giveRatingBtn');
+  ratingBtn.addEventListener('click', openRatingModal);
 }
 
 export function updateFavorites() {

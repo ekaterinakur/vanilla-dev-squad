@@ -1,19 +1,24 @@
-import * as basicLightbox from 'basiclightbox';
 import { setExerciseRating } from '../api/setExerciseRating';
 import {
   showRatingModal,
   hideRatingModal,
   updateCurrentRating,
-  hideExerciseModal,
-  giveRatingBtn,
-  closeRatingModal,
-  closeExerciseModal,
-  ratingForm,
 } from '../rendering/renderModals';
 import { showNotification, showErrorNotification } from '../rendering/common';
 
+let exerciseId = null;
+
+export function openRatingModal(id) {
+  exerciseId = id;
+
+  showRatingModal();
+  setupEventListeners();
+}
+
 export const setupEventListeners = () => {
-  giveRatingBtn.addEventListener('click', showRatingModal);
+  const closeRatingModal = document.getElementById('closeRatingModal');
+  const closeExerciseModal = document.getElementById('closeExerciseModal');
+  const ratingForm = document.getElementById('ratingForm');
 
   closeRatingModal.addEventListener('click', hideRatingModal);
   closeExerciseModal.addEventListener('click', hideRatingModal);
@@ -28,40 +33,27 @@ export const setupEventListeners = () => {
 
 const handleRatingSubmit = async event => {
   event.preventDefault();
+
   const form = event.target;
+  const ratingRadio = form.querySelector('input[name="rating"]:checked');
   const email = form.elements.email.value.trim();
   const description = form.elements.description.value.trim();
-  const rating = form.querySelector('input[name="rating"]:checked')?.value;
-
-  form.elements.email.value = '';
-  form.elements.description.value = '';
+  const rating = parseFloat(ratingRadio.value || '');
 
   if (!rating) {
     showErrorNotification('Failed to submit rating.');
     return;
   }
 
-  const exerciseId = form.dataset.exerciseId;
   const requestData = { email: email, rate: rating, review: description };
 
   try {
-    const response = await setExerciseRating(exerciseId, requestData);
+    await setExerciseRating(exerciseId, requestData);
 
-    if (response.status === 200) {
-      hideRatingModal();
+    showNotification('Rating submitted successfully!');
 
-      form.reset();
-      document.querySelectorAll('.stars input').forEach(star => {
-        star.checked = false;
-      });
-      updateCurrentRating(0);
-
-      showNotification('Rating submitted successfully!');
-
-      setTimeout(() => {
-        hideExerciseModal();
-      }, 3000);
-    }
+    exerciseId = null;
+    hideRatingModal();
   } catch (error) {
     showErrorNotification('Failed to submit rating.');
   }

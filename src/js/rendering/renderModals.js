@@ -1,7 +1,6 @@
 export const giveRatingBtn = document.getElementById('giveRatingBtn');
 export const closeRatingModal = document.getElementById('closeRatingModal');
 export const closeExerciseModal = document.getElementById('closeExerciseModal');
-export const ratingForm = document.getElementById('ratingForm');
 export const ratingModal = document.getElementById('ratingModal');
 export const exerciseModal = document.getElementById('exerciseModal');
 const modalContent = document.querySelector('#ratingModal .modal-content');
@@ -10,6 +9,7 @@ export const showRatingModal = () => {
   ratingModal.style.display = 'block';
   ratingModal.classList.remove('modal-closing');
 };
+
 export const hideRatingModal = () => {
   modalContent.classList.add('dispersing');
   ratingModal.classList.add('modal-closing');
