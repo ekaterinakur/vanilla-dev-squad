@@ -1,35 +1,45 @@
 :root {
-  --primary: #242424;  /** texts on libgt bg, bgs */
-	--primary-disabled: rgba(36, 36, 36, .1);  /** disabled pagination btns ... */
-	--primary-inactive: #D4D4D4; /** inactive pages ... */
-	--primary-light: #F4F4F4; /** light bg, text color on dark bg */
-	--primary-light-inactive: rgba(244, 244, 244, .2); /** not selected star */
-	--gold: #EEA10C; /** selected star */
+  --white: #ffffff;
+  --primary: #242424; /** texts on libgt bg, bgs */
+  --primary-disabled: rgba(36, 36, 36, 0.1); /** disabled pagination btns ... */
+  --primary-inactive: #d4d4d4; /** inactive pages ... */
+  --primary-light: #f4f4f4; /** light bg, text color on dark bg */
+  --primary-light-inactive: rgba(244, 244, 244, 0.2); /** not selected star */
+  --gold: #eea10c; /** selected star */
+  --light-blue-gray: #c6cdd1;
 
-	/* Borders */
-	--border-radius-lg: 30px;
-	--border-radius-md: 20px;
-	--border-radius-sm: 12px;
+  /* Borders */
+  --border-radius-lg: 30px;
+  --border-radius-md: 20px;
+  --border-radius-sm: 12px;
 
-	/* Spaces */
-	--main-padding: 1.25rem;
+  /* Spaces */
+  --main-padding: 1.25rem;
 
-	/* Breackpoints */
+  /* Breackpoints */
   --breakpoint-sm: 375px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1440px;
-	--container-max-width: 335px;
+  --container-max-width: 335px;
+
+  /* Font */
+  --main-font-family: 'DMSans', sans-serif;
+
+  /* Transition */
+  --transition-fast: 330ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: 350ms ease-in;
 }
 
 @media screen and (min-width: 768px) {
-	:root {
-		--main-padding: 1rem;
-		--container-max-width: 704px;
-	}
+  :root {
+    --main-padding: 1rem;
+    --container-max-width: 704px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-	:root {
-		--container-max-width: 1376px;
-	}
+  :root {
+    --main-padding: 0;
+    --container-max-width: 1376px;
+  }
 }
