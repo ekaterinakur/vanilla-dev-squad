@@ -2,7 +2,7 @@ import { getFilters } from '../api/getFilters';
 
 const quoteSection = document.querySelector('.quote-text-wrapper');
 const imagesList = document.querySelector('.filter-list');
-const filterBtns = document.querySelector('.filter-buttons');
+const filterBtns = document.querySelector('.pagination-section');
 
 export const filtersParam = {
   filter: 'Muscles',

@@ -104,6 +104,10 @@
   .filter-list {
     grid-template-columns: repeat(3, 290px);
   }
+
+  .filter-item {
+    max-height: 242px;
+  }
 }
 
 .filter-container {
@@ -169,7 +173,7 @@
   text-transform: capitalize;
 }
 
-.filter-buttons {
+.pagination-section {
   display: flex;
   gap: 8px;
   align-items: center;
@@ -197,7 +201,7 @@
 }
 
 @media only screen and (min-width: 768px) {
-  .filter-buttons {
+  .pagination-section {
     margin-top: 32px;
   }
 
@@ -335,6 +339,7 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  line-clamp: 5;
   -webkit-line-clamp: 5;
 }
 
@@ -350,10 +355,6 @@
 
   .daily-text {
     margin-top: 20px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 5;
   }
 }
 

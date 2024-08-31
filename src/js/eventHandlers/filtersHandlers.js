@@ -10,7 +10,7 @@ import { getQuote } from '../api/getQuote';
 import moment from 'moment';
 
 const imagesList = document.querySelector('.filter-list');
-const filterBtns = document.querySelector('.filter-buttons');
+const filterBtns = document.querySelector('.pagination-section');
 
 export async function changeFilter(event) {
   decorateFilter(event);
