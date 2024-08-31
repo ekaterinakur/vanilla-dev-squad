@@ -1,20 +1,13 @@
-/* @import 'node_modules/modern-normalize/modern-normalize.css'; */
+@import 'modern-normalize/modern-normalize.css';
 @import './font.css';
 @import './variables.css';
-
-
-
-
-@import url('./reset.css');
-@import url('./layout/footer.css');
-@import url('./layout/up_btn.css');
-
-/* cross-browser normalization */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css');
-
+@import './reset.css';
+@import './layout/footer.css';
+@import './layout/up_btn.css';
+@import './filters.css';
 
 body {
-  font-family: 'DMSans', sans-serif;
+  font-family: var(--main-font-family);
   font-size: 16px;
   color: var(--primary);
   background-color: var(--primary-light);
@@ -28,7 +21,9 @@ body {
   padding: var(--main-padding);
 }
 
-
+.section {
+  padding-bottom: 80px;
+}
 
 .is-hidden {
   position: absolute;
@@ -49,3 +44,18 @@ body {
   opacity: 0 !important;
 }
 
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding-bottom: 100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section {
+    padding-bottom: 150px;
+  }
+}

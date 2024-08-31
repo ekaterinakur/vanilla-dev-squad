@@ -1,5 +1,5 @@
 .footer__background {
-    background-color: var(--dark-gray);
+    background-color: var(--primary);
   }
   
   .footer__container {
@@ -26,7 +26,7 @@
   }
   
   .footer__logo {
-    fill: var(--light-gray);
+    fill: var(--primary-light);
   }
   
   .socials__list {
@@ -93,7 +93,7 @@
   }
   
   .socials__icon-footer {
-    fill: var(--light-gray);
+    fill: var(--primary-light);
     transition: fill var(--transition-fast);
   }
   
@@ -123,7 +123,7 @@
   
   .footer__title {
     margin-top: 40px;
-    color: var(--light-gray);
+    color: var(--primary-light);
     font-size: 38px;
     font-weight: 400;
     line-height: 1.15;
@@ -183,7 +183,7 @@
   
   .subscribe__form-title {
     margin-top: 20px;
-    color: var(--light-gray);
+    color: var(--primary-light);
     font-size: 14px;
     font-weight: 400;
     line-height: 1.28;
@@ -207,8 +207,8 @@
     width: 100%;
     padding: 12px 14px;
     border-radius: 30px;
-    border: 1px solid var(--light-gray);
-    background-color: var(--dark-gray);
+    border: 1px solid var(--primary-light);
+    background-color: var(--primary);
     color: rgba(244, 244, 244, 0.6);
     transition: all var(--transition-fast);
   }
@@ -240,25 +240,25 @@
     height: 42px;
     padding: 12px 0px;
     border-radius: 30px;
-    background-color: var(--light-gray);
+    background-color: var(--primary-light);
     border: none;
     font-size: 14px;
     line-height: 1.28px;
-    color: var(--dark-gray);
+    color: var(--primary);
     transition: all var(--transition-fast);
   }
   
   .subscribe__form-btn:disabled {
-    background-color: var(--soft-silver);
+    background-color: var(--primary-inactive);
   }
   
   @media screen and (min-width: 1440px) {
   
     .subscribe__form-btn:hover,
     .subscribe__form-btn:focus {
-      border: 1px solid var(--light-gray);
-      color: var(--light-gray);
-      background-color: var(--dark-gray);
+      border: 1px solid var(--primary-light);
+      color: var(--primary-light);
+      background-color: var(--primary);
     }
   }
   
