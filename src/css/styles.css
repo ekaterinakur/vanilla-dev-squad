@@ -1,6 +1,7 @@
 @import 'modern-normalize/modern-normalize.css';
 @import './font.css';
 @import './variables.css';
+@import './filters.css';
 @import './reset.css';
 @import './header.css';
 
@@ -20,6 +21,37 @@ body {
   padding: var(--main-padding);
 }
 
+@media only screen and (min-width: 1440px) {
+  .container {
+    padding: 0;
+  }
+}
+
 .hidden {
   display: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
