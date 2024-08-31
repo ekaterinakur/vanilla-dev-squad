@@ -1,4 +1,97 @@
-<!-- TODO insert header markup -->
 <header>
-  <div class="container">Header</div>
+  <div class="container header">
+    <!-- <nav class="header-nav"> -->
+    <a href="/index.html" class="header-logo-a"
+      ><img
+        class="header-logo-img"
+        src="/img/logo.svg"
+        alt="YOUR ENERGY LOGO"
+        width="132"
+        height="24"
+    /></a>
+
+    <!-- Бургер меню кнопка -->
+    <button
+      class="burger-menu-btn js-toggle-menu-btn"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Open menu"
+    >
+      <svg class="burger-menu-icon" width="32" height="32">
+        <use href="/img/sprite.svg#burger-menu"></use>
+      </svg>
+    </button>
+
+    <div class="header-mobile-menu js-header-menu">
+      <button
+        class="close-menu-btn js-toggle-menu-btn"
+        aria-label="Close menu"
+        width="32"
+        height="32"
+      >
+        <svg class="close-menu-icon" width="32" height="32">
+          <use href="/img/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <nav class="header-nav">
+        <ul class="header-menu-list">
+          <li class="header-menu-list-item">
+            <a
+              class="header-menu-link {=$home_active}"
+              href="/index.html"
+              >Home</a
+            >
+          </li>
+          <li class="header-menu-list-item">
+            <a
+              class="header-menu-link {=$favorites_active}"
+              href="/favorites.html"
+              >Favorites</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <ul class="header-socials-list">
+        <li>
+          <a
+            class="header-socials-links"
+            href="https://www.facebook.com/goITclub/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to facebook.com"
+          >
+            <svg class="header-social-icon" width="28" height="28">
+              <use href="/img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            class="header-socials-links"
+            href="https://www.instagram.com/goitclub/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to instagram.com"
+          >
+            <svg class="header-social-icon" width="28" height="28">
+              <use href="/img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a
+            class="header-socials-links"
+            href="https://www.youtube.com/c/GoIT"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to youtube.com"
+          >
+            <svg class="header-social-icon" width="28" height="28">
+              <use href="/img/sprite.svg#icon-youtube"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </header>

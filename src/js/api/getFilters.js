@@ -1,6 +1,5 @@
 import client from './client';
 
-// TODO
 export async function getFilters({ page = 1, limit = 12, filter }) {
   try {
     const response = await client.get('filters', {
@@ -13,6 +12,6 @@ export async function getFilters({ page = 1, limit = 12, filter }) {
 
     return response.data;
   } catch (error) {
-    throw new Error(error.response?.status || error.message);
+    throw new Error(error.response?.data?.message || error.message);
   }
 }

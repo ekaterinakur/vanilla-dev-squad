@@ -1,3 +1,4 @@
+import * as basicLightbox from 'basiclightbox';
 import { setExerciseRating } from '../api/setExerciseRating';
 import {
   showRatingModal,
@@ -62,27 +63,6 @@ const handleRatingSubmit = async event => {
       }, 3000);
     }
   } catch (error) {
-    let errorMessage = 'An error occurred';
-
-    if (error.response) {
-      switch (error.response.status) {
-        case 400:
-          errorMessage = 'Bad request (invalid request body)';
-          break;
-        case 404:
-          errorMessage = 'Such exercise not found';
-          break;
-        case 409:
-          errorMessage = 'Such email already exists';
-          break;
-        case 500:
-          errorMessage = 'Server error';
-          break;
-        default:
-          errorMessage = error.response.data.message || errorMessage;
-          break;
-      }
-    }
     showErrorNotification('Failed to submit rating.');
   }
 };

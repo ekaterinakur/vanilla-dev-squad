@@ -5,6 +5,7 @@ export const ratingForm = document.getElementById('ratingForm');
 export const ratingModal = document.getElementById('ratingModal');
 export const exerciseModal = document.getElementById('exerciseModal');
 const modalContent = document.querySelector('#ratingModal .modal-content');
+
 export const showRatingModal = () => {
   ratingModal.style.display = 'block';
   ratingModal.classList.remove('modal-closing');
