@@ -1,5 +1,6 @@
 // Get variable --breakpoint-md from variables.css:root
 const headerMenu = document.querySelector('.js-header-menu');
+const headerOverlay = document.querySelector('.overlay');
 const rootStyles = getComputedStyle(document.documentElement);
 const breakpointMd = parseInt(
   rootStyles.getPropertyValue('--breakpoint-md').trim()
@@ -22,14 +23,17 @@ function addButtonListeners() {
 
 function toggleMenu() {
   headerMenu.classList.toggle('open');
+  headerOverlay.classList.toggle('open');
   document.body.classList.toggle('no-scroll');
 }
-
+toggleMenu();
+toggleMenu();
 // Event handler for toggling the mobile menu
 export function toggleHeaderEventListeners() {
   if (window.innerWidth >= breakpointMd) {
     //Hide mobile menu for larger screens
     headerMenu.classList.remove('open'); // Hide menu on larger screens
+    headerOverlay.classList.remove('open'); // Hide Overlay on larger screens
     document.body.classList.remove('no-scroll');
     removeButtonListeners();
   } else {
