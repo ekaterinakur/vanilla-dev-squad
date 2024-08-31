@@ -7,6 +7,7 @@ import {
   handleFiltersPagination,
 } from './js/eventHandlers/filtersHandlers';
 import { handleSubmitSubscription } from './js/eventHandlers/handleSubscription.js';
+import { openExerciseDialog } from './js/eventHandlers/exerciseHandlers.js';
 
 const navFilter = document.querySelector('.main-nav');
 const filterPagination = document.querySelector('.pagination-section');

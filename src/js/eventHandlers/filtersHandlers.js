@@ -6,7 +6,7 @@ import {
   renderQuote,
   resetFilterView,
   updatePaginationView,
-} from '../rendering/filtersRender';
+} from '../rendering/filtersSection';
 import { getFilters } from '../api/getFilters';
 import { getQuote } from '../api/getQuote';
 

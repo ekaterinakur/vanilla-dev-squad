@@ -7,6 +7,6 @@ export async function getQuote() {
 
     return response.data;
   } catch (error) {
-    throw new Error(error.response?.status || error.message);
+    throw new Error(error.response?.data?.message || error.message);
   }
 }
