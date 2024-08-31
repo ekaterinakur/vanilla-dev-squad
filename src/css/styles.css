@@ -1,12 +1,16 @@
 @import 'modern-normalize/modern-normalize.css';
+@import 'izitoast/dist/css/iziToast.min.css';
 @import './font.css';
 @import './variables.css';
-@import './filters.css';
 @import './reset.css';
-@import './header.css';
+@import './layout/header.css';
+@import './layout/footer.css';
+@import './layout/up-btn.css';
+@import './filters.css';
+@import './dialog.css';
 
 body {
-  font-family: 'DMSans', sans-serif;
+  font-family: var(--main-font-family);
   font-size: 16px;
   color: var(--primary);
   background-color: var(--primary-light);
@@ -21,6 +25,29 @@ body {
   padding: var(--main-padding);
 }
 
+.section {
+  padding-bottom: 80px;
+}
+
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  outline: transparent;
+  outline-offset: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  opacity: 0 !important;
+}
+
 .hidden {
   display: none;
 }
@@ -29,27 +56,14 @@ body {
   overflow: hidden;
 }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+@media screen and (min-width: 768px) {
+  .section {
+    padding-bottom: 100px;
+  }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
+@media screen and (min-width: 1440px) {
+  .section {
+    padding-bottom: 150px;
+  }
 }
