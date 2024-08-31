@@ -25,9 +25,13 @@ function toggleMenu() {
   headerMenu.classList.toggle('open');
   headerOverlay.classList.toggle('open');
   document.body.classList.toggle('no-scroll');
+  document.documentElement.style.overflow = headerMenu.classList.contains(
+    'open'
+  )
+    ? 'hidden'
+    : '';
 }
-toggleMenu();
-toggleMenu();
+
 // Event handler for toggling the mobile menu
 export function toggleHeaderEventListeners() {
   if (window.innerWidth >= breakpointMd) {
@@ -35,6 +39,7 @@ export function toggleHeaderEventListeners() {
     headerMenu.classList.remove('open'); // Hide menu on larger screens
     headerOverlay.classList.remove('open'); // Hide Overlay on larger screens
     document.body.classList.remove('no-scroll');
+    document.documentElement.style.overflow = '';
     removeButtonListeners();
   } else {
     addButtonListeners();
