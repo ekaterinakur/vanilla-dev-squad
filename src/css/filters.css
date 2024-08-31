@@ -8,6 +8,22 @@
   outline: none;
 }
 
+.filter-section {
+  padding-bottom: 60px;
+}
+
+@media only screen and (min-width: 768px) {
+  .filter-section {
+    padding-bottom: 84px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .filter-section {
+    padding-bottom: 132px;
+  }
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr;
