@@ -2,11 +2,15 @@
 @import 'izitoast/dist/css/iziToast.min.css';
 @import './font.css';
 @import './variables.css';
+<<<<<<< HEAD
 @import './reset.css';
 @import './layout/footer.css';
 @import './layout/up-btn.css';
 @import './filters.css';
 @import './dialog.css';
+=======
+@import './hero.css';
+>>>>>>> 1e548f2 (hero)
 
 body {
   font-family: var(--main-font-family);
