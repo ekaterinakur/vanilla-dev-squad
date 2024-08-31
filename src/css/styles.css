@@ -7,6 +7,7 @@
 @import './layout/footer.css';
 @import './layout/up-btn.css';
 @import './filters.css';
+@import './favorites.css';
 @import './dialog.css';
 
 body {
