@@ -1,5 +1,4 @@
-import './js/footer.js';
-import './js/up_btn.js';
+import './js/up-btn.js';
 
 import {
 	changeFilter,
@@ -7,9 +6,11 @@ import {
   filterQuoteLS,
   handleFiltersPagination,
 } from './js/eventHandlers/filtersHandlers';
+import { handleSubmitSubscription } from './js/eventHandlers/handleSubscription.js';
 
 const navFilter = document.querySelector('.main-nav');
 const filterPagination = document.querySelector('.pagination-section');
+const subscriptionForm = document.querySelector('.subscribe__form');
 
 window.addEventListener('resize', () => {
   filterSizeDepends();
@@ -21,3 +22,6 @@ filterQuoteLS();
 
 navFilter.addEventListener('click', changeFilter);
 filterPagination.addEventListener('click', handleFiltersPagination);
+
+// Subscription Form
+subscriptionForm.addEventListener('submit', handleSubmitSubscription);
