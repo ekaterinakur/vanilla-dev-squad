@@ -1,21 +1,27 @@
-import './js/up-btn.js';
+import './up-btn.js';
 
+import { toggleHeaderEventListeners } from './eventHandlers/headerHandlers.js';
 import {
-	changeFilter,
-	filterSizeDepends,
+  changeFilter,
+  filterSizeDepends,
   filterQuoteLS,
   handleFiltersPagination,
-} from './js/eventHandlers/filtersHandlers';
-import { handleSubmitSubscription } from './js/eventHandlers/handleSubscription.js';
-import { openExerciseDialog } from './js/eventHandlers/exerciseHandlers.js';
+} from './eventHandlers/filtersHandlers.js';
+import { handleSubmitSubscription } from './eventHandlers/handleSubscription.js';
+import { openExerciseDialog } from './eventHandlers/exerciseHandlers.js';
 
 const navFilter = document.querySelector('.main-nav');
 const filterPagination = document.querySelector('.pagination-section');
 const subscriptionForm = document.querySelector('.subscribe__form');
 
 window.addEventListener('resize', () => {
+  // Header Listening for window resize events - hide burger menu on larger screens
+  toggleHeaderEventListeners();
   filterSizeDepends();
 });
+
+// Header Setting up event listeners
+toggleHeaderEventListeners();
 
 // Filters
 filterSizeDepends();

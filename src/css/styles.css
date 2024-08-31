@@ -3,6 +3,7 @@
 @import './font.css';
 @import './variables.css';
 @import './reset.css';
+@import './layout/header.css';
 @import './layout/footer.css';
 @import './layout/up-btn.css';
 @import './filters.css';
@@ -14,6 +15,7 @@ body {
   color: var(--primary);
   background-color: var(--primary-light);
   line-height: 1.125;
+  overflow-x: hidden;
 }
 
 .container {
@@ -48,6 +50,10 @@ body {
 
 .hidden {
   display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
