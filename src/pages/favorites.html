@@ -5,16 +5,169 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Favorites</title>
-
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
     <load src="../partials/header.html" />
 
-    <main class="container">
-      <!-- TODO insert page content -->
+    <main class="favorites-container">
+      <div class="favorites-container-wrapper">
+        <div class="quote">
+          <div class="quote-wrapper">
+            <div class="icon-wrapper">
+              <svg class="icon" width="18" height="18">
+                <use href="../img/sprite.svg#icon-running-man"></use>
+              </svg>
+            </div>
+            <div class="content">
+              <div class="title-wrapper">
+                <p class="title">Quote of the day</p>
+                <svg class="icon" width="20" height="20">
+                  <use href="../img/sprite.svg#icon-quotes"></use>
+                </svg>
+              </div>
+              <p class="text">
+                A lot of times I find that people who are blessed with the most
+                talent don't ever develop that attitude, and the ones who aren't
+                blessed in that way are the most competitive and have the
+                biggest heart.
+              </p>
+              <p class="author">Tom Brady</p>
+            </div>
+          </div>
+        </div>
+        <div class="daily-sport-container">
+          <div class="daily-sport">
+            <div class="daily-sport-wrapper">
+              <svg class="icon" width="20" height="20">
+                <use href="../img/sprite.svg#icon-dumbbels"></use>
+              </svg>
+              <div class="content">
+                <p class="title">110 min</p>
+                <p class="text">Daily norm of sports</p>
+              </div>
+            </div>
+          </div>
+          <div class="daily-sport-image"></div>
+        </div>
+      </div>
+      <p class="no-favorites-text">
+        It appears that you haven't added any exercises to your favorites yet.
+        To get started, you can add exercises that you like to your favorites
+        for easier access in the future.
+      </p>
+      <ul class="workouts">
+        <li class="workout">
+          <div class="workout-wrapper">
+            <div class="title">
+              <div class="title-wrapper">
+                <p class="title-text">WORKOUT</p>
+                <svg class="icon" width="16" height="16">
+                  <use href="../img/sprite.svg#icon-trash"></use>
+                </svg>
+              </div>
+              <div class="start-wrapper">
+                <p class="start-text">Start</p>
+                <svg class="icon" width="13" height="13">
+                  <use href="../img/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="content">
+              <div class="icon-wrapper">
+                <svg class="icon" width="16" height="16">
+                  <use href="../img/sprite.svg#icon-running-man"></use>
+                </svg>
+              </div>
+              <p class="text">Air bike</p>
+            </div>
+            <div class="details">
+              <p class="topic">
+                Burned calories: <span class="topic-details">312</span>
+              </p>
+              <p class="topic">
+                Body part: <span class="topic-details">10</span>
+              </p>
+              <p class="topic">Target: <span class="topic-details">3</span></p>
+            </div>
+          </div>
+        </li>
+        <li class="workout">
+          <div class="workout-wrapper">
+            <div class="title">
+              <div class="title-wrapper">
+                <p class="title-text">WORKOUT</p>
+                <svg class="icon" width="16" height="16">
+                  <use href="../img/sprite.svg#icon-trash"></use>
+                </svg>
+              </div>
+              <div class="start-wrapper">
+                <p class="start-text">Start</p>
+                <svg class="icon" width="13" height="13">
+                  <use href="../img/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="content">
+              <div class="icon-wrapper">
+                <svg class="icon" width="16" height="16">
+                  <use href="../img/sprite.svg#icon-running-man"></use>
+                </svg>
+              </div>
+              <p class="text">Air bike</p>
+            </div>
+            <div class="details">
+              <p class="topic">
+                Burned calories: <span class="topic-details">312 / 3</span>
+              </p>
+              <p class="topic">
+                Body part: <span class="topic-details">10 reps</span>
+              </p>
+              <p class="topic">
+                Target: <span class="topic-details">3 sets</span>
+              </p>
+            </div>
+          </div>
+        </li>
+        <li class="workout">
+          <div class="workout-wrapper">
+            <div class="title">
+              <div class="title-wrapper">
+                <p class="title-text">WORKOUT</p>
+                <svg class="icon" width="16" height="16">
+                  <use href="../img/sprite.svg#icon-trash"></use>
+                </svg>
+              </div>
+              <div class="start-wrapper">
+                <p class="start-text">Start</p>
+                <svg class="icon" width="13" height="13">
+                  <use href="../img/sprite.svg#icon-arrow"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="content">
+              <div class="icon-wrapper">
+                <svg class="icon" width="16" height="16">
+                  <use href="../img/sprite.svg#icon-running-man"></use>
+                </svg>
+              </div>
+              <p class="text">Air bike</p>
+            </div>
+            <div class="details">
+              <p class="topic">
+                Burned calories: <span class="topic-details">312 / 3</span>
+              </p>
+              <p class="topic">
+                Body part: <span class="topic-details">10 reps</span>
+              </p>
+              <p class="topic">
+                Target: <span class="topic-details">3 sets</span>
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
     </main>
-
-    <script type="module" src="./main.js"></script>
+    <!-- <script type="module" src="./main.js"></script> -->
   </body>
 </html>

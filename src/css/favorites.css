@@ -1,0 +1,356 @@
+.deactivated {
+  display: none;
+}
+
+.favorites-container {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: var(--main-padding);
+}
+
+.quote,
+.daily-sport,
+.daily-sport-image,
+.workout {
+  background-color: var(--primary);
+  border-radius: 20px;
+  width: 100%;
+}
+
+.daily-sport-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.quote-wrapper,
+.daily-sport-wrapper,
+.workout-wrapper,
+.workout-wrapper .details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 20px;
+  gap: 20px;
+}
+
+.quote-wrapper .icon-wrapper,
+.workout-wrapper .content .icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: rgba(244, 244, 244, 0.2);
+  padding: 7px;
+}
+
+.quote-wrapper .content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.quote-wrapper .content .title-wrapper,
+.workout-wrapper .content {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.quote-wrapper .icon-wrapper .icon,
+.quote-wrapper .content .title-wrapper .icon,
+.workout-wrapper .content .icon-wrapper .icon {
+  display: block;
+  fill: #f4f4f4;
+}
+
+.quote-wrapper .content .title,
+.daily-sport-wrapper .content .title {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  color: #f4f4f4;
+  margin: 0;
+}
+
+.quote-wrapper .content .text,
+.daily-sport-wrapper .content .text {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: rgba(244, 244, 244, 0.6);
+  margin: 0;
+}
+
+.quote-wrapper .content .author {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: #f4f4f4;
+  margin: 0;
+}
+
+.daily-sport {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.daily-sport-wrapper {
+  flex-direction: column;
+  gap: 15px;
+}
+
+.daily-sport-wrapper .content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.daily-sport-wrapper .content .title {
+  color: var(--primary);
+}
+
+.daily-sport-wrapper .content .text {
+  color: rgba(36, 36, 36, 0.6);
+}
+
+.daily-sport-image {
+  background-image: url('../img/favourites/Image-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  width: 100%;
+  height: 119px;
+}
+
+.no-favorites-text {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: var(--primary);
+  text-align: center;
+  margin-top: 20px;
+}
+
+.workouts {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+}
+
+.workouts .workout {
+  background-color: #ffffff;
+}
+
+.workout-wrapper {
+  flex-direction: column;
+  padding: 16px;
+}
+
+.workout .workout-wrapper .title {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+}
+
+.workout .workout-wrapper .title-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.workout .workout-wrapper .title-wrapper .title-text {
+  display: block;
+
+  border: 1px solid #242424;
+  border-radius: 15px;
+  padding: 5px 8px;
+
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.workout .workout-wrapper .title-wrapper .icon {
+  fill: white;
+  stroke: black;
+  margin-left: 10px;
+}
+
+.workout .workout-wrapper .title .start-wrapper {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+}
+
+.workout .workout-wrapper .start-wrapper .icon {
+  fill: white;
+  stroke: black;
+  margin-left: 10px;
+}
+.workout-wrapper,
+.workout-wrapper .details {
+  gap: 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+.workout-wrapper .content {
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.workout-wrapper .content .text {
+  margin-left: 16px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  color: #242424;
+}
+
+.workout-wrapper .content .icon-wrapper {
+  background-color: #242424;
+  align-self: flex-start;
+}
+
+.workout-wrapper .details {
+  padding: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: rgba(36, 36, 36, 0.4);
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.workout-wrapper .details .topic-details {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  color: #242424;
+}
+
+@media screen and (min-width: 768px) {
+  .favorites-container {
+    max-width: 768px;
+    padding: 32px;
+  }
+
+  .quote-wrapper {
+    padding: 40px;
+  }
+
+  .daily-sport-container {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 132px;
+    gap: 16px;
+  }
+
+  .daily-sport-wrapper {
+    padding: 25px;
+  }
+
+  .no-favorites-text {
+    padding-left: 107px;
+    padding-right: 107px;
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .daily-sport-image {
+      background-image: url('../img/favourites/Image-mobile@2x.jpg');
+    }
+  }
+
+  .workouts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 64px;
+    gap: 32px 16px;
+  }
+
+  .workouts .workout {
+    width: calc((100% - 16px) / 2);
+    margin: 0;
+  }
+
+  .workout .workout-wrapper .content {
+    margin-bottom: 8px;
+  }
+
+  .daily-sport-image {
+    margin-top: 0;
+    height: 141px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+}
+.favorites-container {
+  display: flex;
+  flex-direction: row;
+  max-width: 1440px;
+  gap: 32px;
+}
+
+.quote-wrapper {
+  gap: 16px;
+}
+.quote-wrapper .content {
+  gap: 0px;
+}
+
+.favorites-container .favorites-container-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 32px;
+  max-width: 494px;
+}
+
+.quote-wrapper .content .title {
+  margin-bottom: 6px;
+}
+
+.quote-wrapper .content .text {
+  margin-bottom: 18px;
+}
+
+.no-favorites-text {
+  display: none;
+}
+
+.daily-sport-container {
+  margin: 0;
+}
+
+.workouts {
+  margin: 0;
+}

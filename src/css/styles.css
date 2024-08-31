@@ -1,6 +1,17 @@
 @import 'node_modules/modern-normalize/modern-normalize.css';
 @import './font.css';
 @import './variables.css';
+@import './favorites.css';
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 body {
   font-family: 'DMSans', sans-serif;
