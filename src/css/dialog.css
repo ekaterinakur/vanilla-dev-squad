@@ -1,0 +1,222 @@
+@import url('basiclightbox/dist/basicLightbox.min.css');
+
+.basicLightbox__placeholder {
+  background: var(--primary);
+  font-family: 'DMSans';
+  font-style: normal;
+  color: var(--primary-light);
+  padding: 2rem;
+  width: 708px;
+  border-radius: var(--border-radius-md);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-height: calc(100vh - 4rem);
+  overflow: auto;
+}
+
+.exercise-dialog {
+  display: flex;
+  gap: 32px;
+  margin-bottom: auto;
+}
+
+.dialog-icon-close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  cursor: pointer;
+  stroke: white;
+}
+
+.exercise-image-container {
+  width: 270px;
+}
+
+.exercise-image {
+  width: 100%;
+  border-radius: var(--border-radius-sm);
+}
+
+.exercise-content {
+  width: 342px;
+  display: flex;
+  flex-direction: column;
+}
+
+.exercise-name {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+}
+
+.exercise-rating {
+  height: 18px;
+  margin-bottom: 16px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  display: flex;
+  gap: 2px;
+}
+
+.exercise-icon-star {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  fill: var(--primary-light-inactive);
+}
+
+.exercise-icon-star.checked {
+  fill: var(--gold);
+}
+
+.exercise-details {
+  padding: 8px 0;
+  border-top: 1px solid var(--primary-light-inactive);
+  border-bottom: 1px solid var(--primary-light-inactive);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.exercise-details-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.exercise-details-item span {
+  color: rgba(244, 244, 244, 0.4);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.exercise-description {
+  color: rgba(244, 244, 244, 0.6);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  overflow: hidden;
+}
+
+.exercise-actions {
+  margin-top: 3.5rem;
+  display: flex;
+  gap: 7px;
+  justify-content: flex-end;
+}
+
+.base-btn {
+  display: flex;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 30px;
+  color: var(--primary);
+  font-family: 'DMSans';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  background: none;
+  border: 1px solid var(--primary-light);
+  color: var(--primary-light);
+  cursor: pointer;
+}
+
+.favorites-btn {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.exercise-icon-heart {
+  width: 18px;
+  height: 18px;
+  fill: transparent;
+  stroke: currentColor;
+}
+
+.favorites-btn:hover {
+  background: var(--primary);
+  color: var(--primary-light);
+}
+
+.give-rating-btn:hover {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+@media screen and (max-width: 768px) {
+  .basicLightbox__placeholder {
+    padding: 40px 20px;
+    width: 335px;
+    height: auto;
+  }
+
+  .exercise-dialog {
+    flex-direction: column;
+  }
+
+  .dialog-icon-close {
+    right: 14px;
+    top: 14px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .exercise-image-container {
+    width: 100%;
+  }
+
+  .exercise-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .exercise-name {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    text-wrap: wrap;
+  }
+
+  .exercise-rating {
+    margin-bottom: 20px;
+  }
+
+  .exercise-details {
+    padding: 10px 0;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+
+  .exercise-actions {
+    margin-top: 2.5rem;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .base-btn {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+  }
+
+  .exercise-icon-heart {
+    width: 16px;
+    height: 16px;
+  }
+}
