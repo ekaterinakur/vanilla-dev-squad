@@ -20,7 +20,8 @@
   --breakpoint-sm: 375px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1440px;
-  --container-max-width: 335px;
+  /* --container-max-width: 335px; */
+  --container-max-width: 100%;
 
   /* Font */
   --main-font-family: 'DMSans', sans-serif;
@@ -33,13 +34,12 @@
 @media screen and (min-width: 768px) {
   :root {
     --main-padding: 1rem;
-    --container-max-width: 704px;
+    --container-max-width: 736px;
   }
 }
 
 @media screen and (min-width: 1440px) {
   :root {
-    --main-padding: 0;
     --container-max-width: 1376px;
   }
 }

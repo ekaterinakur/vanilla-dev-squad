@@ -1,14 +1,14 @@
-import './js/up-btn.js';
+import './up-btn.js';
 
-import { toggleHeaderEventListeners } from './js/eventHandlers/headerHandlers.js';
+import { toggleHeaderEventListeners } from './eventHandlers/headerHandlers.js';
 import {
   changeFilter,
   filterSizeDepends,
   filterQuoteLS,
   handleFiltersPagination,
-} from './js/eventHandlers/filtersHandlers';
-import { handleSubmitSubscription } from './js/eventHandlers/handleSubscription.js';
-import { openExerciseDialog } from './js/eventHandlers/exerciseHandlers.js';
+} from './eventHandlers/filtersHandlers.js';
+import { handleSubmitSubscription } from './eventHandlers/handleSubscription.js';
+import { openExerciseDialog } from './eventHandlers/exerciseHandlers.js';
 
 const navFilter = document.querySelector('.main-nav');
 const filterPagination = document.querySelector('.pagination-section');
