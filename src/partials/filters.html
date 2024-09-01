@@ -5,47 +5,55 @@
         Exercises 
         <span id="selected-category"></span>
       </h2>
-      <div id="search-container" class="hidden">
-        <form id="search-form">
-          <input
-            type="text"
-            id="search-input"
-            placeholder="Search exercises..."
-          />
-          <button type="submit" id="search-button">Search</button>
-        </form>
+      <div class="search-and-main-nav">
+        <div id="search-container" class="hidden">
+          <form id="search-form">
+            <label class="search-label">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Search"
+              />
+            </label>
+            <button type="submit" id="search-button">
+              <svg class="burger-menu-icon" width="18" height="18">
+                <use href="/img/sprite.svg#search"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+        <nav class="main-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <button
+                type="submit"
+                class="nav-btn untreated decorated"
+                data-filter="Muscles"
+              >
+                Muscles
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="submit"
+                class="nav-btn untreated"
+                data-filter="Body parts"
+              >
+                Body parts
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                type="submit"
+                class="nav-btn untreated"
+                data-filter="Equipment"
+              >
+                Equipment
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
-      <nav class="main-nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <button
-              type="submit"
-              class="nav-btn untreated decorated"
-              data-filter="Muscles"
-            >
-              Muscles
-            </button>
-          </li>
-          <li class="nav-item">
-            <button
-              type="submit"
-              class="nav-btn untreated"
-              data-filter="Body parts"
-            >
-              Body parts
-            </button>
-          </li>
-          <li class="nav-item">
-            <button
-              type="submit"
-              class="nav-btn untreated"
-              data-filter="Equipment"
-            >
-              Equipment
-            </button>
-          </li>
-        </ul>
-      </nav>
     </div>
 
     <div class="filter-wrapper">
