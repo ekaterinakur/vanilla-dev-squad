@@ -94,10 +94,10 @@ import{a as T,h as O,i as b,b as D}from"./vendor-c65b4e60.js";(function(){const 
         <h6 class="exercise-card-name-title">${e.name}</h6>
       </div>
       <div class="exercise-card-info">
-        <p class="exercise-card-info-cal">Burned calories: ${e.burnedCalories} / ${e.time} min </p>
-        <p class="exercise-card-info-body">Body part: ${e.bodyPart}</p>
-        <p class="exercise-card-info-terget">Target: ${e.target}</p>
+        <p class="exercise-card-info-cal"><span class="exercises-card-span">Burned calories:</span> ${e.burnedCalories} / ${e.time} min </p>
+        <p class="exercise-card-info-body"><span class="exercises-card-span">Body part:</span> ${e.bodyPart}</p>
+        <p class="exercise-card-info-terget"><span class="exercises-card-span">Target:</span> ${e.target}</p>
       </div>
     </div>
   `}function ve(e){const t=document.getElementById("exercise-list");if(!Array.isArray(e)){console.error("Expected exercises to be an array, but received:",e);return}t.innerHTML=e.map(n=>ae(n)).join(""),document.querySelectorAll(".start-btn").forEach(n=>{n.addEventListener("click",o=>{const i=o.target.dataset.id;ne(i)})})}export{y as F,x as a,fe as b,p as c,ve as d,ge as e,ue as f,de as g,pe as h,me as i,ne as o,ae as r,ee as s,le as t};
-//# sourceMappingURL=renderExercises-19f54876.js.map
+//# sourceMappingURL=renderExercises-7cec0547.js.map
