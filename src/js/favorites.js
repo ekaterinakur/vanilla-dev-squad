@@ -17,21 +17,21 @@ const renderFavoritesList = () => {
           <p class="list-item-header-text">Workout</p>
           <button class="list-item-header-button-delete">
             <svg class="list-item-header-icon" width="16" height="16">
-              <use href=".${sprite}#icon-trash"></use>
+              <use href="${sprite}#icon-trash"></use>
             </svg>
           </button>
         </div>
         <button class="list-item-header-button-start">
           <p class="list-item-header-button-text">Start</p>
           <svg class="list-item-header-button-icon" width="13" height="13">
-            <use href=".${sprite}#icon-arrow"></use>
+            <use href="${sprite}#icon-arrow"></use>
           </svg>
         </button>
       </div>
       <div class="list-item-content">
         <div class="item-content-icon-wrapper">
           <svg class="item-content-icon" width="14" height="16">
-            <use href=".${sprite}#icon-running-man"></use>
+            <use href="${sprite}#icon-running-man"></use>
           </svg>
         </div>
         <p class="item-content-text">${item.name}</p>
