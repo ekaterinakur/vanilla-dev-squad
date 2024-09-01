@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios from 'axios';
 
 const client = axios.create({
   baseURL: 'https://your-energy.b.goit.study/api/',
