@@ -184,6 +184,7 @@
 .list-item-header-button-start {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 9px;
   border: none;
   background-color: #fff;
@@ -212,6 +213,13 @@
   align-items: center;
   gap: 16px;
   margin-top: 25px;
+}
+
+.item-content-text {
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
 }
 
 .item-content-icon-wrapper {
@@ -331,6 +339,12 @@
     width: calc((100% - 16px) / 2);
     max-width: 344px;
   }
+
+  .item-content-text {
+    font-size: 24px;
+    line-height: 133%;
+  }
+
   .favorites-container-empty {
     margin-top: 114px;
     max-width: 554px;

@@ -1,11 +1,12 @@
-import sprite from '../img/sprite.svg';
+import { openExerciseDialog } from './eventHandlers/exerciseHandlers.js';
 
-let favorites = JSON.parse(localStorage.getItem('favorites'));
-let container = document.querySelector('.favorites-container');
+const favorites = JSON.parse(localStorage.getItem('favorites'));
+const container = document.querySelector('.favorites-container');
+
 const emptyLocalStorage =
   "It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future";
 
-const renderFavoritesList = () => {
+export const renderFavoritesList = () => {
   if (document.querySelector('.favorites-container-empty')) {
     document.querySelector('.favorites-container-empty').remove();
   }
@@ -17,21 +18,21 @@ const renderFavoritesList = () => {
           <p class="list-item-header-text">Workout</p>
           <button class="list-item-header-button-delete">
             <svg class="list-item-header-icon" width="16" height="16">
-              <use href="${sprite}#icon-trash"></use>
+              <use href="../img/sprite.svg#icon-trash"></use>
             </svg>
           </button>
         </div>
-        <button class="list-item-header-button-start">
-          <p class="list-item-header-button-text">Start</p>
+        <button class="list-item-header-button-start list-item-header-button-text" data-id="${item._id}">
+          Start
           <svg class="list-item-header-button-icon" width="13" height="13">
-            <use href="${sprite}#icon-arrow"></use>
+            <use href="../img/sprite.svg#icon-arrow"></use>
           </svg>
         </button>
       </div>
       <div class="list-item-content">
         <div class="item-content-icon-wrapper">
           <svg class="item-content-icon" width="14" height="16">
-            <use href="${sprite}#icon-running-man"></use>
+            <use href="../img/sprite.svg#icon-running-man"></use>
           </svg>
         </div>
         <p class="item-content-text">${item.name}</p>
@@ -56,7 +57,7 @@ const renderFavoritesList = () => {
   );
 };
 
-const renderEmptyListNotification = () => {
+export const renderEmptyListNotification = () => {
   if (document.querySelector('.favorites-container-list')) {
     document.querySelector('.favorites-container-list').remove();
   }
@@ -66,8 +67,18 @@ const renderEmptyListNotification = () => {
   );
 };
 
-if (favorites.length > 0) {
+if (favorites) {
   renderFavoritesList();
 } else {
   renderEmptyListNotification();
 }
+
+const startButtons = document.querySelectorAll(
+  '.list-item-header-button-start'
+);
+startButtons.forEach(button => {
+  button.addEventListener('click', event => {
+    const exerciseId = event.target.dataset.id;
+    openExerciseDialog(exerciseId);
+  });
+});
