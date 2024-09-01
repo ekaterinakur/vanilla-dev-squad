@@ -1,23 +1,35 @@
-/* body {
-  overflow-x: hidden;
-} */
-
 .header.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .header-logo-img {
   max-width: none;
 }
 
+/* Оверлей, який блокує взаємодію з елементами */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Темний прозорий фон */
+  z-index: 99; /* Поверх інших елементів, але під меню */
+  display: none; /* Прихований за замовчуванням */
+}
+
+.overlay.open {
+  display: block;
+}
+
 .header-mobile-menu {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 20px 70px 20px;
   justify-content: space-between;
-  width: 100%;
   position: absolute;
   top: 0;
   right: 0;
