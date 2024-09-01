@@ -55,6 +55,7 @@
 .hero__women-images {
   display: flex;
   justify-content: center;
+  margin-bottom: 16px;
 }
 
 .hero__women-fitness {
@@ -133,6 +134,10 @@
 @media screen and (min-width: 1440px) {
   .hero__right-block {
     display: flex;
+  }
+
+  .hero__women-images {
+    margin-bottom: 0;
   }
 
   .hero__teg-button {
