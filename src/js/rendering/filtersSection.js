@@ -7,7 +7,7 @@ export function renderImg(imagesData) {
     .map(image => {
       return `
         <li class="filter-item">
-          <button type="submit" class="filter-btn untreated data-filter=${image.filter} data-name=${image.name}">
+          <button type="submit" class="filter-btn untreated" data-filter=${image.filter} data-name=${image.name}>
             <div class="filter-container">
               <img class="filter-img" src="${image.imgURL}" alt="${image.name}" width=335 height=225>
               <div class="filter-overlay"></div>
