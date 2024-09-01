@@ -15,6 +15,7 @@ import {
   handleSearchSubmit,
 } from './eventHandlers/uiEventHandlers';
 
+
 const navFilter = document.querySelector('.main-nav');
 const filterPagination = document.querySelector('.pagination-section');
 const subscriptionForm = document.querySelector('.subscribe__form');

@@ -19,6 +19,12 @@
   }
 }
 
+.visually-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
 .scrollup-btn:hover,
 .scrollup-btn:focus {
   border-color: var(--primary);
