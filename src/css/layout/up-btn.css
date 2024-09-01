@@ -1,45 +1,58 @@
 .scrollup-btn {
   position: fixed;
-  bottom: 40px;
-  right: 40px;
-  border-radius: 20px;
+  bottom: 20px;
+  right: 100px;
+  width: 100px; 
+  height: 100px;
+  border-radius: 50%; 
   background-color: rgba(18, 20, 23, 0.5);
-  font-size: 0px;
   border: 1px solid rgba(244, 244, 244, 0.5);
   transition-property: border-color, background-color;
   transition-duration: 300ms;
   transition-timing-function: linear;
 
-  @media (1440px<=width) {
-    bottom: 24px;
-    right: 24px;
-    border-radius: 25px;
+  @media (min-width: var(--breakpoint-sm)) { 
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
   }
 }
 
 .scrollup-btn:hover,
 .scrollup-btn:focus {
-  border-color: #0ceecc;
-  background-color: rgba(18, 20, 23, 0.5);
+  border-color: var(--primary);
+  background-color: var(--primary);
 }
 
 .scrollup-btn:hover .scrollup-btn-icon,
 .scrollup-btn:focus .scrollup-btn-icon {
-  fill: #04ffee;
+  fill: var(--white);
 }
 
 .scrollup-btn-icon {
-  height: 40px;
-  width: 40px;
-  padding: 10px;
-  fill: #f4f4f4;
+  width: 22.69px;
+  height: 22.69px;
+  padding: 0;
+  fill: var(--white);
   transition-property: fill;
   transition-duration: 300ms;
   transition-timing-function: linear;
 
-  @media (1440px<=width) {
-    height: 50px;
-    width: 50px;
-    padding: 10px;
+  @media (min-width: var(--breakpoint-sm)) {
+    width: 9.07px;
+    height: 9.07px;
   }
+
+  @media (min-width: var(--breakpoint-md)) {
+    width: 13.61px;
+    height: 13.61px;
+  }
+
+  @media (min-width: var(--breakpoint-lg)) {
+    width: 22.69px;
+    height: 22.69px;
+  }
+
 }
+
