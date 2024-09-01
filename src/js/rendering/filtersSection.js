@@ -6,16 +6,17 @@ export function renderImg(imagesData) {
   const markUp = imagesData.results
     .map(image => {
       return `
-    <li class="filter-item">
-        <button type="submit" class="filter-btn untreated data-filter=${image.filter} data-name=${image.name}">
-          <div class="filter-container">
-            <img class="filter-img" src="${image.imgURL}" alt="${image.name}" width=335 height=225>
-            <div class="filter-overlay"></div>
-            <p class="filter-name">${image.name}</p>
-            <p class="filter-filter">${image.filter}</p>
-          </div>  
-        </button>
-    </li>`;
+        <li class="filter-item">
+          <button type="submit" class="filter-btn untreated" data-filter=${image.filter} data-name=${image.name}>
+            <div class="filter-container">
+              <img class="filter-img" src="${image.imgURL}" alt="${image.name}" width=335 height=225>
+              <div class="filter-overlay"></div>
+              <p class="filter-name">${image.name}</p>
+              <p class="filter-filter">${image.filter}</p>
+            </div>  
+          </button>
+        </li>
+      `;
     })
     .join('');
   imagesList.insertAdjacentHTML('beforeend', markUp);

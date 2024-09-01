@@ -56,8 +56,6 @@
     .subscribe__form {
       width: 352px; 
     }
-  
-    
   }
   
   @media screen and (min-width: 768px) {
@@ -159,12 +157,6 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 1.28px;
-  }
-  
-  @media screen and (min-width: 375px) {
-    .subscribe__form {
-      width: 335px;
-    }
   }
   
   @media screen and (min-width: 768px) {

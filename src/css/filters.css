@@ -8,6 +8,22 @@
   outline: none;
 }
 
+.filter-section {
+  padding-bottom: 60px;
+}
+
+@media only screen and (min-width: 768px) {
+  .filter-section {
+    padding-bottom: 84px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .filter-section {
+    padding-bottom: 132px;
+  }
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: 335px;
@@ -80,21 +96,15 @@
   margin-top: 4px;
 }
 
-.filter-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .filter-list {
   display: grid;
-  grid-template-columns: 335px;
+  grid-template-columns: 1fr;
   row-gap: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .filter-list {
-    grid-template-columns: repeat(3, 225px);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 15px;
     row-gap: 32px;
   }
@@ -102,7 +112,7 @@
 
 @media only screen and (min-width: 1440px) {
   .filter-list {
-    grid-template-columns: repeat(3, 290px);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .filter-item {
@@ -178,6 +188,7 @@
   gap: 8px;
   align-items: center;
   margin-top: 20px;
+  justify-content: center;
 }
 
 .pagination-btn {

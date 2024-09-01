@@ -6,7 +6,7 @@ import {
   renderQuote,
   resetFilterView,
   updatePaginationView,
-} from '../rendering/filtersRender';
+} from '../rendering/filtersSection';
 import { getFilters } from '../api/getFilters';
 import { getQuote } from '../api/getQuote';
 
@@ -17,13 +17,15 @@ export const filtersParam = {
 };
 
 export async function changeFilter(event) {
-  decorateFilter(event);
-  resetFilterView(true);
-  filtersParam.page = 1;
-  filtersParam.filter = event.target.dataset.filter;
-  const filtersData = await getFilters(filtersParam);
-  renderImg(filtersData);
-  renderPagination(filtersData);
+  if (event.target.classList.contains('nav-btn')) {
+    decorateFilter(event);
+    resetFilterView(true);
+    filtersParam.page = 1;
+    filtersParam.filter = event.target.dataset.filter;
+    const filtersData = await getFilters(filtersParam);
+    renderImg(filtersData);
+    renderPagination(filtersData);
+  }
 }
 
 export async function filterQuoteLS() {
@@ -65,10 +67,12 @@ export async function filterSizeDepends() {
 }
 
 export async function handleFiltersPagination(event) {
-  resetFilterView();
-  const pageBtn = event.target;
-  filtersParam.page = pageBtn.dataset.page;
-  const filtersData = await getFilters(filtersParam);
-  renderImg(filtersData);
-  updatePaginationView(pageBtn);
+  if (event.target.classList.contains('pagination-btn')) {
+    resetFilterView();
+    const pageBtn = event.target;
+    filtersParam.page = pageBtn.dataset.page;
+    const filtersData = await getFilters(filtersParam);
+    renderImg(filtersData);
+    updatePaginationView(pageBtn);
+  }
 }

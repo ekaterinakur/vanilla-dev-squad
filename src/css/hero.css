@@ -1,0 +1,140 @@
+.hero-section {
+  padding-bottom: 40px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.hero__star {
+  position: relative;
+  top: 8px;
+  height: 38px;
+  width: 38px;
+  /* display: inline-block; */
+}
+
+.hero__title {
+  display: block;
+  font-family: 'DMSans', 'sans-serif';
+  font-weight: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 116%;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+  margin-bottom: 20px;
+  max-width: 335px;
+  width: 100%;
+}
+
+.hero__text {
+  font-family: 'DMSans';
+  font-weight: normal;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.02em;
+  color: var(--primary);
+  margin-bottom: 20px;
+  max-width: 335px;
+  width: 100%;
+  background-color: none;
+}
+
+.hero__right-block {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.hero__women-fitness {
+  margin-bottom: 32px;
+}
+
+.hero__teg-buttons__up {
+  display: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 197px;
+  width: 100%;
+}
+
+.hero__teg-buttons__bottom {
+  display: flex;
+  gap: 8px;
+}
+
+.hero__teg-button {
+  border: 1px solid var(--primary);
+  border-radius: 30px;
+  padding: 4px 12px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+.hero__teg-button a {
+  text-decoration: none;
+}
+
+.women-images > img {
+  border-radius: 30px;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero-section {
+    padding-bottom: 112px;
+  }
+
+  .hero__star {
+    top: 3px;
+    height: 60px;
+    width: 60px;
+  }
+
+  .hero__title {
+    font-size: 74px;
+    line-height: 100%;
+    max-width: 639px;
+  }
+
+  .hero__text {
+    font-size: 18px;
+    line-height: 133%;
+    max-width: 528px;
+  }
+
+  .hero__teg-buttons__bottom {
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .hero__right-block {
+    display: block;
+  }
+
+  .hero__teg-button {
+    padding: 4px 16px;
+    font-size: 15px;
+    line-height: 150%;
+    flex: auto;
+  }
+
+  .hero__teg-buttons__up {
+    display: flex;
+  }
+
+  .hero__teg-buttons__bottom {
+    display: none;
+  }
+}
