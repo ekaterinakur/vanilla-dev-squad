@@ -8,9 +8,9 @@
 
     
     <script type="module" crossorigin src="/vanilla-dev-squad/commonHelpers.js"></script>
-    <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/vendor-478dae0d.js">
-    <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/filtersHandlers-4e2a642a.js">
-    <link rel="stylesheet" href="/vanilla-dev-squad/assets/filtersHandlers-54c98a9f.css">
+    <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/vendor-c65b4e60.js">
+    <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/renderExercises-189885b2.js">
+    <link rel="stylesheet" href="/vanilla-dev-squad/assets/renderExercises-81da09ea.css">
   </head>
   <body>
     <header>
@@ -113,11 +113,11 @@
 </header>
 
 
-    <main class="favorites">
-      <h2 class="favorites-header">Favorites</h2>
-      <div class="favorites-container">
-        <div class="favorites-container-wrapper">
-          <div class="quote">
+    <main class="favorites container">
+      <h2 class="main-title">Favorites</h2>
+<div class="favorites-container">
+  <div class="favorites-container-wrapper">
+    <div class="quote">
   <div class="quote-icon left-icon">
     <svg class="quote-icon" width="34" height="32">
       <use xlink:href="/vanilla-dev-squad/assets/sprite-45ef4b9c.svg#quote"></use>
@@ -133,18 +133,79 @@
   </div>
 </div>
 
-          <div class="favorites-container-static">
-            <div class="favorites-container-static-daily-norm">
-              <svg class="daily-norm-icon" width="20" height="20">
-                <use href="../img/sprite.svg#icon-dumbbels"></use>
-              </svg>
-              <p class="daily-norm-title">110 min</p>
-              <p class="daily-norm-text">Daily norm of sports</p>
-            </div>
-            <div class="favorites-container-static-image"></div>
-          </div>
+    <div class="favorites-container-static">
+      <div class="favorites-container-static-daily-norm">
+        <svg class="daily-norm-icon" width="20" height="20">
+          <use href="/vanilla-dev-squad/assets/sprite-45ef4b9c.svg#icon-dumbbels"></use>
+        </svg>
+        <p class="daily-norm-title">110 min</p>
+        <p class="daily-norm-text">Daily norm of sports</p>
+      </div>
+      <div class="favorites-container-static-image"></div>
+    </div>
+  </div>
+
+  <ul class="favorites-container-list"></ul>
+</div>
+
+      <div id="ratingModal" class="modal" style="display: none">
+  <div class="modal-content">
+    <svg id="closeRatingModal" class="dialog-icon-close" width="28" height="28">
+      <use href="/vanilla-dev-squad/assets/sprite-45ef4b9c.svg#icon-close"></use>
+    </svg>
+    <h3 class="rating-title">Rating</h3>
+
+    <form id="ratingForm">
+      <div class="rating-value">
+        <span class="current-rating" id="currentRating">0.0</span>
+        <div class="stars">
+          <input type="radio" name="rating" value="5" id="star5" /><label
+            for="star5"
+            >★</label
+          >
+          <input type="radio" name="rating" value="4" id="star4" /><label
+            for="star4"
+            >★</label
+          >
+          <input type="radio" name="rating" value="3" id="star3" /><label
+            for="star3"
+            >★</label
+          >
+          <input type="radio" name="rating" value="2" id="star2" /><label
+            for="star2"
+            >★</label
+          >
+          <input type="radio" name="rating" value="1" id="star1" /><label
+            for="star1"
+            >★</label
+          >
         </div>
       </div>
+      <div class="input-group">
+        <!-- <label for="email"></label> -->
+        <input
+          class="input-email"
+          type="email"
+          name="email"
+          required
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          placeholder="Email"
+        />
+      </div>
+      <div class="input-group">
+        <label for="description"></label>
+        <textarea
+          id="description"
+          name="description"
+          required
+          placeholder="Your comment"
+        ></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send</button>
+    </form>
+  </div>
+</div>
+
     </main>
 
     
