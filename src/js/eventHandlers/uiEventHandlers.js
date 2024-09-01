@@ -17,17 +17,23 @@ export function handleCategoryClick(event, currentPage, currentBodypart, current
 
     
     const mainTitle = document.querySelector('.main-title');
-    const exercisesTitle = document.getElementById('exercises-title');
+    const selectedCategoryEl = document.getElementById('selected-category');
     const searchContainer = document.getElementById('search-container');
 
     if (filter) {
-        if (exercisesTitle) {
-            exercisesTitle.classList.remove('hidden');
-        }
-        mainTitle.textContent = 'Exercises /';
         searchContainer.classList.remove('hidden'); 
     } else {
         searchContainer.classList.add('hidden');
+    }
+
+    if (name) {
+        selectedCategoryEl.innerHTML = 
+            `
+                <span class="category__slash"> / </span>
+                <span class="category__selected">${name.charAt(0).toUpperCase() + name.slice(1).toLowerCase()}</span>
+            `;
+    } else {
+        selectedCategoryEl.innerHTML = "";
     }
 
     if (filter === 'bodypart') {
@@ -44,14 +50,6 @@ export function handleCategoryClick(event, currentPage, currentBodypart, current
         currentMuscles = '';
     }
 
-    const selectedCategoryEl = document.getElementById('selected-category');
-    
-    if (selectedCategoryEl) {
-        selectedCategoryEl.textContent = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-        selectedCategoryEl.style.display = 'inline';
-    }
-
-    console.log('Filter applied:', { currentBodypart, currentMuscles, currentEquipment, currentKeyword });
     currentPage = 1;
     updateExercises({ 
         currentPage, 

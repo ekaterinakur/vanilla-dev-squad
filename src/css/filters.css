@@ -455,10 +455,14 @@
   }
 }
 
-#exercises-title{
+.category__selected{
   font-size: 20px;
   font-family: var(--main-font-family);
   color: rgba(36, 36, 36, 0.5);
+}
+
+.category__slash {
+  
 }
 
 .exercise-card-wrapper{

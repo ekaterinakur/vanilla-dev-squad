@@ -91,9 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Скрываем заголовок
-    const exercisesTitle = document.getElementById('exercises-title');
+    const exercisesTitle = document.getElementById('selected-category');
     if (exercisesTitle) {
-        exercisesTitle.classList.add('hidden');
+        exercisesTitle.innerHTML = "";
     }
 });
 
