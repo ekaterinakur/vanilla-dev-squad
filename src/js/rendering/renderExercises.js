@@ -47,7 +47,7 @@ exerciseListEl.innerHTML = exercises.map(exercise => {
     startButtons.forEach(button => {
         button.addEventListener('click', (event) => {
             const exerciseId = event.target.dataset.id;
-            console.log(event.target);
+            // console.log(event.target);
             openExerciseDialog(exerciseId);
         });
     });
