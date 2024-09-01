@@ -50,6 +50,8 @@ const handleRatingSubmit = async event => {
 
     showNotification('Rating submitted successfully!');
 
+    form.reset();
+    updateCurrentRating(0);
     exerciseId = null;
     hideRatingModal();
   } catch (error) {
