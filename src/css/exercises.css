@@ -172,6 +172,11 @@
   }
 
   #exercise-list {
-    gap: 16px;
+    column-gap: 16px;
+    row-gap: 32px;
   }
+}
+
+.exercises-card-span {
+  opacity: 40%;
 }
