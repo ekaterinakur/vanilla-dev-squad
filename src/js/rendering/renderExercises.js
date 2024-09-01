@@ -1,56 +1,68 @@
-import { openExerciseDialog } from '../eventHandlers/exerciseHandlers'; 
+import { openExerciseDialog } from '../eventHandlers/exerciseHandlers';
+import sprite from '../../img/sprite.svg';
 
 export function renderExercises(exercises) {
-    const exerciseListEl = document.getElementById('exercise-list');
+  const exerciseListEl = document.getElementById('exercise-list');
 
-    if (!Array.isArray(exercises)) {
-        console.error('Expected exercises to be an array, but received:', exercises);
-        return;
-    }
+  if (!Array.isArray(exercises)) {
+    console.error(
+      'Expected exercises to be an array, but received:',
+      exercises
+    );
+    return;
+  }
 
-exerciseListEl.innerHTML = exercises.map(exercise => {
-    const roundedRating = Math.round(exercise.rating);
+  exerciseListEl.innerHTML = exercises
+    .map(exercise => {
+      const roundedRating = Math.round(exercise.rating);
 
-    return `
+      return `
         <div class="exercise-card">
             <div class="exercise-card-rating">
                 <div class="exercise-card-wrapper">
                     <span class="exercise-card-workout">workout</span>
                 <p class="exercise-card-ret">${roundedRating.toFixed(1)}</p>
                 <svg class="exercize-icon-star" width="18" height="18">
-                    <use href="./img/sprite.svg#icon-star"></use>
+                    <use href="${sprite}#icon-star"></use>
                 </svg>
                 </div>
                 <button class="start-btn" data-id="${exercise._id}">
                     Start
                     <svg class="exercize-icon-arrow" width="16" height="16">
-                        <use href="./img/sprite.svg#arrow"></use>
+                        <use href="${sprite}#arrow"></use>
                     </svg>
                 </button>
             </div>
             <div class="exercise-card-name">
                 <svg class="exercize-icon-cross" width="24" height="24">
-                    <use href="./img/sprite.svg#running-stick-figure-border"></use>
+                    <use href="${sprite}#running-stick-figure-border"></use>
                 </svg>
                 <h3 class="exercise-card-name-title">${exercise.name}</h3>
             </div>
             <div class="exercise-card-info">
-                <p class="exercise-card-info-cal">Burned calories: ${exercise.burnedCalories} / ${exercise.time} min </p>
-                <p class="exercise-card-info-body">Body part: ${exercise.bodyPart}</p>
-                <p class="exercise-card-info-terget">Target: ${exercise.target}</p>
+                <p class="exercise-card-info-cal">Burned calories: ${
+                  exercise.burnedCalories
+                } / ${exercise.time} min </p>
+                <p class="exercise-card-info-body">Body part: ${
+                  exercise.bodyPart
+                }</p>
+                <p class="exercise-card-info-terget">Target: ${
+                  exercise.target
+                }</p>
             </div>
         </div>
     `;
-}).join('');
+    })
+    .join('');
 
-    const startButtons = document.querySelectorAll('.start-btn');
-    startButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            const exerciseId = event.target.dataset.id;
-            // console.log(event.target);
-            openExerciseDialog(exerciseId);
-        });
+  const startButtons = document.querySelectorAll('.start-btn');
+  startButtons.forEach(button => {
+    button.addEventListener('click', event => {
+      const exerciseId = event.target.dataset.id;
+      // console.log(event.target);
+      openExerciseDialog(exerciseId);
     });
+  });
 }
 
 // function updateVisibleExercises() {
