@@ -1,4 +1,4 @@
-import{o as r}from"./assets/exerciseHandlers-85059fa2.js";import"./assets/vendor-478dae0d.js";const s=JSON.parse(localStorage.getItem("favorites")),i=document.querySelector(".favorites-container"),a="It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future",n=()=>{document.querySelector(".favorites-container-empty")&&document.querySelector(".favorites-container-empty").remove();const e=s.map(t=>`<li class="favorites-container-list-item">
+import{f as r,o as a}from"./assets/filtersHandlers-4370a4e9.js";import"./assets/vendor-478dae0d.js";const s=JSON.parse(localStorage.getItem("favorites")),i=document.querySelector(".favorites-container"),n="It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future";r();const c=()=>{document.querySelector(".favorites-container-empty")&&document.querySelector(".favorites-container-empty").remove();const e=s.map(t=>`<li class="favorites-container-list-item">
       <div class="list-item-header">
         <div class="list-item-header-text-wrapper">
           <p class="list-item-header-text">Workout</p>
@@ -34,5 +34,5 @@ import{o as r}from"./assets/exerciseHandlers-85059fa2.js";import"./assets/vendor
           Target:<span class="item-footer-text">${t.target}</span>
         </p>
       </div>
-    </li>`).join("");i.insertAdjacentHTML("beforeend",`<ul class="favorites-container-list">${e}</ul>`)},c=()=>{document.querySelector(".favorites-container-list")&&document.querySelector(".favorites-container-list").remove(),i.insertAdjacentHTML("beforeend",`<p class="favorites-container-empty">${a}</p>`)};s?n():c();const l=document.querySelectorAll(".list-item-header-button-start");l.forEach(e=>{e.addEventListener("click",t=>{const o=t.target.dataset.id;r(o)})});
+    </li>`).join("");i.insertAdjacentHTML("beforeend",`<ul class="favorites-container-list">${e}</ul>`)},l=()=>{document.querySelector(".favorites-container-list")&&document.querySelector(".favorites-container-list").remove(),i.insertAdjacentHTML("beforeend",`<p class="favorites-container-empty">${n}</p>`)};s?c():l();const d=document.querySelectorAll(".list-item-header-button-start");d.forEach(e=>{e.addEventListener("click",t=>{const o=t.target.dataset.id;a(o)})});
 //# sourceMappingURL=commonHelpers.js.map
