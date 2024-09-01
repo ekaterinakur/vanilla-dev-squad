@@ -47,7 +47,7 @@
   transition-timing-function: linear;
 }
 
-@media (min-width: 375px) {
+/* @media (min-width: 375px) {
   .scrollup-btn-icon {
     width: 9.07px;
     height: 9.07px;
@@ -66,4 +66,4 @@
     width: 22.69px;
     height: 22.69px;
   }
-}
+} */
