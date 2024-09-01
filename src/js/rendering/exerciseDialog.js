@@ -1,9 +1,10 @@
 import { capitalizeFirstLetter } from '../utils';
+import sprite from '../../img/sprite.svg';
 
 export function getDialogTemplate(exercise, isFavorite) {
   return `
     <svg id="dialogIconClose" class="dialog-icon-close" width="28" height="28">
-      <use href="/img/sprite.svg#icon-close"></use>
+      <use href="${sprite}#icon-close"></use>
     </svg>
     <div class="exercise-dialog">    
       <div class="exercise-image-container">
@@ -50,7 +51,7 @@ function generateStars(rating) {
       <svg class="exercise-icon-star${
         isChecked ? ' checked' : ''
       }" width="18" height="18">
-        <use href="/img/sprite.svg#icon-star"></use>
+        <use href="${sprite}#icon-star"></use>
       </svg>
     `;
   }
@@ -63,9 +64,7 @@ function generateFavoritesBtn(isFavorite) {
     <button id="favoritesBtn" class="base-btn favorites-btn" type="button">
       ${isFavorite ? 'Remove from favorites' : 'Add to favorites'}
       <svg class="exercise-icon-heart" width="18" height="18">
-        <use href="/img/sprite.svg#${
-          isFavorite ? 'trash' : 'icon-heart'
-        }"></use>
+        <use href="${sprite}#${isFavorite ? 'trash' : 'icon-heart'}"></use>
       </svg>
     </button>
   `;
@@ -78,14 +77,14 @@ export function updateFavoritesButton(isFavorite) {
     favoritesBtn.innerHTML = `
       Add to favorites
       <svg class="exercise-icon-heart" width="18" height="18">
-        <use href="/img/sprite.svg#icon-heart"></use>
+        <use href="${sprite}#icon-heart"></use>
       </svg>
     `;
   } else {
     favoritesBtn.innerHTML = `
       Remove from favorites
       <svg class="exercise-icon-heart" width="18" height="18">
-        <use href="/img/sprite.svg#trash"></use>
+        <use href="${sprite}#trash"></use>
       </svg>
     `;
   }
