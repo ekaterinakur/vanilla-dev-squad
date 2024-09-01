@@ -54,6 +54,7 @@
   padding: 16px;
   background: #fff;
   border-radius: 15px;
+  width: 100%;
 }
 
 .start-btn {
@@ -82,6 +83,11 @@
 .exercise-card-name-title {
   font-size: 20px;
   text-transform: capitalize;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  max-width: 250px;
 }
 
 .exercise-card-name {
@@ -144,32 +150,17 @@
     flex-direction: row;
     flex-wrap: wrap;
     display: flex;
-    min-width: 900px;
-  }
-
-  .exercise-list {
-    min-width: 900px;
   }
 
   .exercise-card {
-    max-width: 344px;
+    width: calc((100% - 16px) / 2);
   }
 
   .exercise-card-name-title {
     font-size: 24px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-wrap: nowrap;
-    max-width: 250px;
   }
   .exercise-card-name {
     margin-bottom: 12px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .exercise-card {
-    min-width: 442px;
   }
 }
 
