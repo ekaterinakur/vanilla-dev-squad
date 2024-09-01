@@ -2,9 +2,9 @@
   padding-bottom: 40px;
 }
 
-.flex-container {
+.hero-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   margin-bottom: 32px;
 }
@@ -52,6 +52,11 @@
   align-items: flex-end;
 }
 
+.hero__women-images {
+  display: flex;
+  justify-content: center;
+}
+
 .hero__women-fitness {
   margin-bottom: 32px;
 }
@@ -67,6 +72,7 @@
 .hero__teg-buttons__bottom {
   display: flex;
   gap: 8px;
+  justify-content: center;
 }
 
 .hero__teg-button {
@@ -85,7 +91,7 @@
   text-decoration: none;
 }
 
-.women-images > img {
+.women-images>img {
   border-radius: 30px;
   margin-bottom: 20px;
 }
@@ -93,6 +99,10 @@
 @media screen and (min-width: 768px) {
   .hero-section {
     padding-bottom: 112px;
+  }
+
+  .hero-content {
+    justify-content: space-between;
   }
 
   .hero__star {
