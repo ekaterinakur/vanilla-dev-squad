@@ -8,9 +8,9 @@
 
     
     <script type="module" crossorigin src="/vanilla-dev-squad/commonHelpers2.js"></script>
-    <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/headerHandlers-883f69f9.js">
+    <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/headerHandlers-d9c2909e.js">
     <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/vendor-451007fb.js">
-    <link rel="stylesheet" href="/vanilla-dev-squad/assets/headerHandlers-ddc618f4.css">
+    <link rel="stylesheet" href="/vanilla-dev-squad/assets/headerHandlers-a563daf8.css">
   </head>
   <body>
     <header>
@@ -114,6 +114,62 @@
 
 
     <main class="container">
+      <div id="ratingModal" class="modal" style="display: none">
+  <div class="modal-content">
+    <span class="close" id="closeRatingModal">&times;</span>
+    <h3 class="rating-title">Rating</h3>
+
+    <form id="ratingForm">
+      <div class="rating-value">
+        <span class="current-rating" id="currentRating">0.0</span>
+        <div class="stars">
+          <input type="radio" name="rating" value="5" id="star5" /><label
+            for="star5"
+            >★</label
+          >
+          <input type="radio" name="rating" value="4" id="star4" /><label
+            for="star4"
+            >★</label
+          >
+          <input type="radio" name="rating" value="3" id="star3" /><label
+            for="star3"
+            >★</label
+          >
+          <input type="radio" name="rating" value="2" id="star2" /><label
+            for="star2"
+            >★</label
+          >
+          <input type="radio" name="rating" value="1" id="star1" /><label
+            for="star1"
+            >★</label
+          >
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="email"></label>
+        <input
+          class="input-email"
+          type="email"
+          name="email"
+          required
+          pattern="^[a-zA-Z0-9_.±]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"
+          placeholder="Email"
+        />
+      </div>
+      <div class="input-group">
+        <label for="description"></label>
+        <textarea
+          id="description"
+          name="description"
+          required
+          placeholder="Your comment"
+        ></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send</button>
+    </form>
+  </div>
+</div>
+
       <section class="filter-section">
   <div class="grid-container">
     <div class="main-wrapper">
@@ -176,23 +232,14 @@
       <picture class="women-picture">
         <source
           media="(min-width: 1440px)"
-          srcset="
-            ../img/filters/women_des.jpg    1x,
-            ../img/filters/women_des@2x.jpg 2x
-          "
+          srcset="/vanilla-dev-squad/assets/women_des-f49a9e34.jpg 1x, /vanilla-dev-squad/assets/women_des@2x-75853674.jpg 2x"
         />
         <source
           media="(min-width: 768px)"
-          srcset="
-            ../img/filters/women_pla.jpg    1x,
-            ../img/filters/women_pla@2x.jpg 2x
-          "
+          srcset="/vanilla-dev-squad/assets/women_pla-6f4b80e6.jpg 1x, /vanilla-dev-squad/assets/women_pla@2x-fc06f848.jpg 2x"
         />
         <img
-          srcset="
-            ../img/filters/women_mob.jpg    1x,
-            ../img/filters/women_mob@2x.jpg 2x
-          "
+          srcset="/vanilla-dev-squad/assets/women_mob-09ce52c0.jpg 1x, /vanilla-dev-squad/assets/women_mob@2x-62f63d42.jpg 2x"
           alt="sport-women"
         />
       </picture>
