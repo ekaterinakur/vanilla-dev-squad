@@ -8,9 +8,9 @@
 
     
     <script type="module" crossorigin src="/vanilla-dev-squad/commonHelpers2.js"></script>
-    <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/headerHandlers-d9c2909e.js">
-    <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/vendor-451007fb.js">
-    <link rel="stylesheet" href="/vanilla-dev-squad/assets/headerHandlers-a563daf8.css">
+    <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/headerHandlers-eab94a71.js">
+    <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/vendor-4a631802.js">
+    <link rel="stylesheet" href="/vanilla-dev-squad/assets/headerHandlers-f5b7b6f2.css">
   </head>
   <body>
     <header>
@@ -33,7 +33,7 @@
       aria-label="Open menu"
     >
       <svg class="burger-menu-icon" width="32" height="32">
-        <use href="/vanilla-dev-squad/assets/sprite-21fffb36.svg#burger-menu"></use>
+        <use href="/vanilla-dev-squad/assets/sprite-9eaa7a70.svg#burger-menu"></use>
       </svg>
     </button>
 
@@ -48,7 +48,7 @@
         height="32"
       >
         <svg class="close-menu-icon" width="32" height="32">
-          <use href="/vanilla-dev-squad/assets/sprite-21fffb36.svg#icon-close"></use>
+          <use href="/vanilla-dev-squad/assets/sprite-9eaa7a70.svg#icon-close"></use>
         </svg>
       </button>
       <nav class="header-nav">
@@ -77,7 +77,7 @@
             aria-label="Link to facebook.com"
           >
             <svg class="header-social-icon" width="28" height="28">
-              <use href="/vanilla-dev-squad/assets/sprite-21fffb36.svg#icon-facebook"></use>
+              <use href="/vanilla-dev-squad/assets/sprite-9eaa7a70.svg#icon-facebook"></use>
             </svg>
           </a>
         </li>
@@ -90,7 +90,7 @@
             aria-label="Link to instagram.com"
           >
             <svg class="header-social-icon" width="28" height="28">
-              <use href="/vanilla-dev-squad/assets/sprite-21fffb36.svg#icon-instagram"></use>
+              <use href="/vanilla-dev-squad/assets/sprite-9eaa7a70.svg#icon-instagram"></use>
             </svg>
           </a>
         </li>
@@ -103,7 +103,7 @@
             aria-label="Link to youtube.com"
           >
             <svg class="header-social-icon" width="28" height="28">
-              <use href="/vanilla-dev-squad/assets/sprite-21fffb36.svg#icon-youtube"></use>
+              <use href="/vanilla-dev-squad/assets/sprite-9eaa7a70.svg#icon-youtube"></use>
             </svg>
           </a>
         </li>
@@ -173,7 +173,20 @@
       <section class="filter-section">
   <div class="grid-container">
     <div class="main-wrapper">
-      <h2 class="main-title">Exercises</h2>
+      <h2 class="main-title">
+        Exercises 
+        <span id="selected-category"></span>
+      </h2>
+      <div id="search-container" class="hidden">
+        <form id="search-form">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search exercises..."
+          />
+          <button type="submit" id="search-button">Search</button>
+        </form>
+      </div>
       <nav class="main-nav">
         <ul class="nav-list">
           <li class="nav-item">
@@ -212,10 +225,16 @@
       <div class="pagination-section"></div>
     </div>
 
+    <div class="exercise-wrapper hidden">
+      <div id="exercise-list"></div>
+      <div id="loader" class="hidden">Loading...</div>
+      <div id="pagination-container"></div>
+    </div>
+
     <div class="quote">
       <div class="quote-icon left-icon">
         <svg class="quote-icon" width="34" height="32">
-          <use xlink:href="/vanilla-dev-squad/assets/sprite-21fffb36.svg#quote"></use>
+          <use xlink:href="/vanilla-dev-squad/assets/sprite-9eaa7a70.svg#quote"></use>
         </svg>
       </div>
       <div class="quote-text-wrapper">
@@ -223,7 +242,7 @@
       </div>
       <div class="quote-icon right-icon">
         <svg class="quote-icon-commas" width="20" height="20">
-          <use xlink:href="/vanilla-dev-squad/assets/sprite-21fffb36.svg#commas"></use>
+          <use xlink:href="/vanilla-dev-squad/assets/sprite-9eaa7a70.svg#commas"></use>
         </svg>
       </div>
     </div>
@@ -248,7 +267,7 @@
     <div class="daily-time">
       <div class="daily-wrapper">
         <svg class="daily-icon" width="34" height="32">
-          <use xlink:href="/vanilla-dev-squad/assets/sprite-21fffb36.svg#gym"></use>
+          <use xlink:href="/vanilla-dev-squad/assets/sprite-9eaa7a70.svg#gym"></use>
         </svg>
       </div>
       <div class="daily-block">
@@ -270,7 +289,7 @@
 
       <button class="scrollup-btn visually-hidden" type="button">
   <svg class="scrollup-btn-icon" aria-label="Scroll up icon">
-    <use href="/vanilla-dev-squad/assets/sprite-21fffb36.svg#arrow-top-right"></use>
+    <use href="/vanilla-dev-squad/assets/sprite-9eaa7a70.svg#arrow-top-right"></use>
   </svg>
 </button>
 
@@ -286,7 +305,7 @@
           height="24"
           aria-label="scroll down icon"
         >
-          <use href="/vanilla-dev-squad/assets/sprite-21fffb36.svg#logo"></use>
+          <use href="/vanilla-dev-squad/assets/sprite-9eaa7a70.svg#logo"></use>
         </svg>
       </a>
       <ul class="socials__list">
@@ -303,7 +322,7 @@
               width="24"
               height="24"
             >
-              <use href="/vanilla-dev-squad/assets/sprite-21fffb36.svg#icon-facebook"></use>
+              <use href="/vanilla-dev-squad/assets/sprite-9eaa7a70.svg#icon-facebook"></use>
             </svg>
           </a>
         </li>
@@ -320,7 +339,7 @@
               width="24"
               height="24"
             >
-              <use href="/vanilla-dev-squad/assets/sprite-21fffb36.svg#icon-instagram"></use>
+              <use href="/vanilla-dev-squad/assets/sprite-9eaa7a70.svg#icon-instagram"></use>
             </svg>
           </a>
         </li>
@@ -337,7 +356,7 @@
               width="24"
               height="24"
             >
-              <use href="/vanilla-dev-squad/assets/sprite-21fffb36.svg#icon-youtube"></use>
+              <use href="/vanilla-dev-squad/assets/sprite-9eaa7a70.svg#icon-youtube"></use>
             </svg>
           </a>
         </li>
