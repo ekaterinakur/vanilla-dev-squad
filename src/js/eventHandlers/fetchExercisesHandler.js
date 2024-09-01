@@ -14,14 +14,14 @@ export async function fetchExercisesHandler({ page, limit, bodypart, muscles, eq
                 results: response.results,
                 totalPages: response.totalPages
             };
-        } else {
-            renderExercises([]);
-            showErrorNotification('No exercises found for the selected category.');
-            return {
-                results: [],
-                totalPages: 1
-            };
-        }
+        } 
+        
+        renderExercises([]);
+        showErrorNotification('No exercises found for the selected category.');
+        return {
+            results: [],
+            totalPages: 1
+        };
     } catch (error) {
         showErrorNotification('Error fetching exercises');
         console.error('Error fetching exercises:', error);
