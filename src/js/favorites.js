@@ -1,11 +1,13 @@
 import { openExerciseDialog } from './eventHandlers/exerciseHandlers.js';
-
+import {filterQuoteLS} from './eventHandlers/filtersHandlers.js';
 const favorites = JSON.parse(localStorage.getItem('favorites'));
 const container = document.querySelector('.favorites-container');
 
 const emptyLocalStorage =
   "It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future";
 
+filterQuoteLS();
+  
 export const renderFavoritesList = () => {
   if (document.querySelector('.favorites-container-empty')) {
     document.querySelector('.favorites-container-empty').remove();
