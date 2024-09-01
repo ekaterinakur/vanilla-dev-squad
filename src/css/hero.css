@@ -10,6 +10,8 @@
 }
 
 .hero__star {
+  position: relative;
+  top: -3px;
   height: 38px;
   width: 38px;
 }
@@ -100,6 +102,7 @@
   }
 
   .hero__star {
+    top: -9px;
     height: 60px;
     width: 60px;
   }
