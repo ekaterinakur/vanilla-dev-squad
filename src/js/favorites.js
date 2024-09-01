@@ -1,4 +1,4 @@
-import sprite from './img/sprite.svg';
+import sprite from '../img/sprite.svg';
 
 let favorites = JSON.parse(localStorage.getItem('favorites'));
 let container = document.querySelector('.favorites-container');
