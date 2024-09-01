@@ -15,8 +15,46 @@
       favorites_active="active"
     />
 
-    <main class="container">
-      <!-- TODO insert page content -->
+    <main class="favorites">
+      <h2 class="favorites-header">Favorites</h2>
+      <div class="favorites-container">
+        <div class="favorites-container-wrapper">
+          <div class="favorites-container-quote">
+            <div class="favorites-container-quote-wrapper">
+              <div class="quote-icon-wrapper">
+                <svg class="quote-icon-wrapper-icon" width="18" height="20">
+                  <use href="../img/sprite.svg#icon-running-man"></use>
+                </svg>
+              </div>
+              <div class="quote-content">
+                <div class="quote-content-title-wrapper">
+                  <p class="content-title-wrapper-title">Quote of the day</p>
+                  <svg class="quote-content-title-icon" width="20" height="20">
+                    <use href="../img/sprite.svg#icon-quotes"></use>
+                  </svg>
+                </div>
+                <p class="quote-content-text">
+                  A lot of times I find that people who are blessed with the
+                  most talent don't ever develop that attitude, and the ones who
+                  aren't blessed in that way are the most competitive and have
+                  the biggest heart.
+                </p>
+                <p class="quote-content-author">Tom Brady</p>
+              </div>
+            </div>
+          </div>
+          <div class="favorites-container-static">
+            <div class="favorites-container-static-daily-norm">
+              <svg class="daily-norm-icon" width="20" height="20">
+                <use href="../img/sprite.svg#icon-dumbbels"></use>
+              </svg>
+              <p class="daily-norm-title">110 min</p>
+              <p class="daily-norm-text">Daily norm of sports</p>
+            </div>
+            <div class="favorites-container-static-image"></div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <script type="module" src="./js/favorites.js"></script>
