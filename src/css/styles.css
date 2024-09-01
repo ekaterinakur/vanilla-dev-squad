@@ -12,7 +12,6 @@
 @import './exercises.css';
 @import './hero.css';
 
-
 body {
   font-family: var(--main-font-family);
   font-size: 16px;
