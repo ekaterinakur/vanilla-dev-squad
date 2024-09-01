@@ -64,7 +64,7 @@ function generateFavoritesBtn(isFavorite) {
       ${isFavorite ? 'Remove from favorites' : 'Add to favorites'}
       <svg class="exercise-icon-heart" width="18" height="18">
         <use href="/img/sprite.svg#${
-          isFavorite ? 'icon-delete' : 'icon-heart'
+          isFavorite ? 'trash' : 'icon-heart'
         }"></use>
       </svg>
     </button>
@@ -85,7 +85,7 @@ export function updateFavoritesButton(isFavorite) {
     favoritesBtn.innerHTML = `
       Remove from favorites
       <svg class="exercise-icon-heart" width="18" height="18">
-        <use href="/img/sprite.svg#icon-delete"></use>
+        <use href="/img/sprite.svg#trash"></use>
       </svg>
     `;
   }
