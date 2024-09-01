@@ -8,13 +8,11 @@ import {
   handleFiltersPagination,
 } from './eventHandlers/filtersHandlers.js';
 import { handleSubmitSubscription } from './eventHandlers/handleSubscription.js';
-import { openExerciseDialog } from './eventHandlers/exerciseHandlers.js';
 import { updateExercises } from './eventHandlers/updateExercisesHandler.js';
 import {
   handleCategoryClick,
   handleSearchSubmit,
 } from './eventHandlers/uiEventHandlers';
-
 
 const navFilter = document.querySelector('.main-nav');
 const filterPagination = document.querySelector('.pagination-section');

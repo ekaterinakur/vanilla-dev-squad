@@ -8,20 +8,22 @@ import { showNotification, showErrorNotification } from '../rendering/common';
 
 let exerciseId = null;
 
-export function openRatingModal(id) {
+export function openRatingModal(id, updateListCallback) {
   exerciseId = id;
 
   showRatingModal();
-  setupEventListeners();
+  setupEventListeners(updateListCallback);
 }
 
-export const setupEventListeners = () => {
+export const setupEventListeners = (updateListCallback) => {
   const closeRatingModal = document.getElementById('closeRatingModal');
   const ratingForm = document.getElementById('ratingForm');
 
   closeRatingModal.addEventListener('click', hideRatingModal);
 
-  ratingForm.addEventListener('submit', handleRatingSubmit);
+  ratingForm.addEventListener('submit', (event) => 
+    handleRatingSubmit(event, updateListCallback)
+  );
   document.querySelectorAll('.stars input').forEach(star => {
     star.addEventListener('change', event =>
       updateCurrentRating(event.target.value)
@@ -29,7 +31,7 @@ export const setupEventListeners = () => {
   });
 };
 
-const handleRatingSubmit = async event => {
+const handleRatingSubmit = async (event, updateListCallback) => {
   event.preventDefault();
 
   const form = event.target;
@@ -53,6 +55,8 @@ const handleRatingSubmit = async event => {
     form.reset();
     updateCurrentRating(0);
     exerciseId = null;
+
+    updateListCallback && updateListCallback();
     hideRatingModal();
   } catch (error) {
     showErrorNotification('Failed to submit rating.');

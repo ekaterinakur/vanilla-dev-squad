@@ -6,18 +6,19 @@ import {
 } from '../rendering/exerciseDialog';
 import { openRatingModal } from './ratingHandlers';
 
+export const FAVORITES_KEY_LS = 'favorites';
+
 let instance;
-const favoritesKey = 'favorites';
 let favorites = [];
 let exercise;
 
-export async function openExerciseDialog(exerciseId) {
+export async function openExerciseDialog(exerciseId, updateListCallback) {
   const data = await getExersiseById(exerciseId);
 
   exercise = data;
 
-  favorites = localStorage.getItem(favoritesKey)
-    ? JSON.parse(localStorage.getItem(favoritesKey))
+  favorites = localStorage.getItem(FAVORITES_KEY_LS)
+    ? JSON.parse(localStorage.getItem(FAVORITES_KEY_LS))
     : [];
 
   const isFavorite = favorites.findIndex(ex => ex._id === exercise._id) !== -1;
@@ -29,20 +30,20 @@ export async function openExerciseDialog(exerciseId) {
   });
 
   instance.show();
-	addDialogListeners();
+	addDialogListeners(updateListCallback);
 }
 
-function addDialogListeners() {
+function addDialogListeners(updateListCallback) {
   const closeBtn = document.getElementById('dialogIconClose');
   closeBtn.addEventListener('click', closeDialogHandler);
 
   document.addEventListener('keydown', closeDialogHandler);
 
   const favoritesBtn = document.getElementById('favoritesBtn');
-  favoritesBtn.addEventListener('click', updateFavorites);
+  favoritesBtn.addEventListener('click', () => updateFavorites(updateListCallback));
 
   const ratingBtn = document.getElementById('giveRatingBtn');
-  ratingBtn.addEventListener('click', () => openRatingModal(exercise._id));
+  ratingBtn.addEventListener('click', () => openRatingModal(exercise._id, updateListCallback));
 }
 
 function removeDialogListeners() {
@@ -58,7 +59,7 @@ function removeDialogListeners() {
   ratingBtn.addEventListener('click', openRatingModal);
 }
 
-export function updateFavorites() {
+export function updateFavorites(updateListCallback) {
   const foundIndex = favorites.findIndex(ex => ex._id === exercise._id);
 
   if (foundIndex !== -1) {
@@ -67,9 +68,10 @@ export function updateFavorites() {
     favorites.push(exercise);
   }
 
-  localStorage.setItem(favoritesKey, JSON.stringify(favorites));
+  localStorage.setItem(FAVORITES_KEY_LS, JSON.stringify(favorites));
 
   updateFavoritesButton(foundIndex !== -1);
+  updateListCallback && updateListCallback();
 }
 
 function closeDialogHandler(event) {
