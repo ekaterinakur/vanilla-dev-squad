@@ -59,6 +59,7 @@
 
 .hero__women-fitness {
   margin-bottom: 32px;
+  text-align: left;
 }
 
 .hero__teg-buttons__up {
@@ -91,14 +92,15 @@
   text-decoration: none;
 }
 
-.women-images>img {
+.women-images {
+  display: inline-block;
   border-radius: 30px;
-  margin-bottom: 20px;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 768px) {
   .hero-section {
-    padding-bottom: 112px;
+    padding-bottom: 2.5rem;
   }
 
   .hero-content {
@@ -130,7 +132,7 @@
 
 @media screen and (min-width: 1440px) {
   .hero__right-block {
-    display: block;
+    display: flex;
   }
 
   .hero__teg-button {

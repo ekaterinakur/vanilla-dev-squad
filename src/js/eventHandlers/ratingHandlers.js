@@ -17,11 +17,9 @@ export function openRatingModal(id) {
 
 export const setupEventListeners = () => {
   const closeRatingModal = document.getElementById('closeRatingModal');
-  const closeExerciseModal = document.getElementById('closeExerciseModal');
   const ratingForm = document.getElementById('ratingForm');
 
   closeRatingModal.addEventListener('click', hideRatingModal);
-  closeExerciseModal.addEventListener('click', hideRatingModal);
 
   ratingForm.addEventListener('submit', handleRatingSubmit);
   document.querySelectorAll('.stars input').forEach(star => {
