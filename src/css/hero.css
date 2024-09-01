@@ -10,15 +10,17 @@
 }
 
 .hero__star {
+  position: relative;
+  top: 8px;
   height: 38px;
   width: 38px;
+  /* display: inline-block; */
 }
 
 .hero__title {
   display: block;
   font-family: 'DMSans', 'sans-serif';
   font-weight: normal;
-  font-style: italic;
   font-weight: 400;
   font-size: 38px;
   line-height: 116%;
@@ -27,12 +29,6 @@
   margin-bottom: 20px;
   max-width: 335px;
   width: 100%;
-}
-
-.hero__title svg {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 0.25em;
 }
 
 .hero__text {
@@ -100,6 +96,7 @@
   }
 
   .hero__star {
+    top: 3px;
     height: 60px;
     width: 60px;
   }
