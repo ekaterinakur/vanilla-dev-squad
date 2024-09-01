@@ -59,5 +59,9 @@ export function updatePaginationView(button) {
   const filterPaginationBtn = filterBtns.querySelectorAll('.pagination-btn');
   filterPaginationBtn.forEach(btn => btn.classList.remove('active'));
   button.classList.add('active');
-  window.scrollTo(0, 800);
+  const filterWrapper = document.querySelector('.main-title');
+  window.scrollTo({
+    top: filterWrapper.offsetTop,
+    behavior: 'smooth',
+  });
 }
