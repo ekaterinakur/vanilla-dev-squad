@@ -61,11 +61,13 @@
   background: none;
   padding: 0;
   font-size: 14px;
+  display: flex;
 }
 
 .exercize-icon-arrow {
   margin-left: 8px;
   stroke: currentColor;
+  pointer-events: none;
 }
 
 .exercise-card-name {
