@@ -2,16 +2,18 @@
   position: fixed;
   bottom: 20px;
   right: 100px;
-  width: 100px; 
+  width: 100px;
   height: 100px;
-  border-radius: 50%; 
+  border-radius: 50%;
   background-color: rgba(18, 20, 23, 0.5);
   border: 1px solid rgba(244, 244, 244, 0.5);
   transition-property: border-color, background-color;
   transition-duration: 300ms;
   transition-timing-function: linear;
+}
 
-  @media (min-width: var(--breakpoint-sm)) { 
+@media screen and (min-width: 375px) {
+  .scrollup-btn {
     bottom: 10px;
     right: 10px;
     width: 40px;
@@ -23,7 +25,6 @@
   opacity: 0;
   visibility: hidden;
 }
-
 
 .scrollup-btn:hover,
 .scrollup-btn:focus {
@@ -44,21 +45,25 @@
   transition-property: fill;
   transition-duration: 300ms;
   transition-timing-function: linear;
+}
 
-  @media (min-width: var(--breakpoint-sm)) {
+/* @media (min-width: 375px) {
+  .scrollup-btn-icon {
     width: 9.07px;
     height: 9.07px;
   }
+}
 
-  @media (min-width: var(--breakpoint-md)) {
+@media (min-width: 768px) {
+  .scrollup-btn-icon {
     width: 13.61px;
     height: 13.61px;
   }
+}
 
-  @media (min-width: var(--breakpoint-lg)) {
+@media (min-width: 1440px) {
+  .scrollup-btn-icon {
     width: 22.69px;
     height: 22.69px;
   }
-
-}
-
+} */

@@ -125,7 +125,6 @@
     margin-bottom: 0;
     justify-content: flex-end;
   }
-
 }
 
 .nav-list {
@@ -407,7 +406,6 @@
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  line-clamp: 5;
   -webkit-line-clamp: 5;
 }
 

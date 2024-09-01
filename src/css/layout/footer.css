@@ -208,7 +208,7 @@
   padding: 12px 14px;
   border-radius: 30px;
   border: 1px solid var(--primary-light);
-  background-color: var(--primary);
+  background-color: var(--primary) !important;
   color: rgba(244, 244, 244, 0.6);
   transition: all var(--transition-fast);
 }
@@ -218,11 +218,11 @@
   border-color: orange;
 }
 
-.subscribe__form-input:user-invalid {
+.subscribe__form-input:invalid {
   border-color: #ee323d;
 }
 
-.subscribe__form-input:user-valid {
+.subscribe__form-input:valid {
   border-color: #4dc274;
 }
 
