@@ -43,9 +43,9 @@ export function renderExercise(exercise, isFavorite = false) {
         <h6 class="exercise-card-name-title">${exercise.name}</h6>
       </div>
       <div class="exercise-card-info">
-        <p class="exercise-card-info-cal">Burned calories: ${exercise.burnedCalories} / ${exercise.time} min </p>
-        <p class="exercise-card-info-body">Body part: ${exercise.bodyPart}</p>
-        <p class="exercise-card-info-terget">Target: ${exercise.target}</p>
+        <p class="exercise-card-info-cal"><span class="exercises-card-span">Burned calories:</span> ${exercise.burnedCalories} / ${exercise.time} min </p>
+        <p class="exercise-card-info-body"><span class="exercises-card-span">Body part:</span> ${exercise.bodyPart}</p>
+        <p class="exercise-card-info-terget"><span class="exercises-card-span">Target:</span> ${exercise.target}</p>
       </div>
     </div>
   `;
