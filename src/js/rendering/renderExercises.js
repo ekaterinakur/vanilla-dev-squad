@@ -1,4 +1,5 @@
 import { openExerciseDialog } from '../eventHandlers/exerciseHandlers';
+import sprite from '../../img/sprite.svg';
 
 export function renderExercises(exercises) {
   const exerciseListEl = document.getElementById('exercise-list');
@@ -22,19 +23,19 @@ export function renderExercises(exercises) {
                     <span class="exercise-card-workout">workout</span>
                 <p class="exercise-card-ret">${roundedRating.toFixed(1)}</p>
                 <svg class="exercize-icon-star" width="18" height="18">
-                    <use href="./img/sprite.svg#icon-star"></use>
+                    <use href="${sprite}#icon-star"></use>
                 </svg>
                 </div>
                 <button class="start-btn" data-id="${exercise._id}">
                     Start
                     <svg class="exercize-icon-arrow" width="16" height="16">
-                        <use href="./img/sprite.svg#arrow"></use>
+                        <use href="${sprite}#arrow"></use>
                     </svg>
                 </button>
             </div>
             <div class="exercise-card-name">
                 <svg class="exercize-icon-cross" width="24" height="24">
-                    <use href="./img/sprite.svg#running-stick-figure-border"></use>
+                    <use href="${sprite}#running-stick-figure-border"></use>
                 </svg>
                 <h3 class="exercise-card-name-title">${exercise.name}</h3>
             </div>
