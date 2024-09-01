@@ -1,0 +1,55 @@
+<div id="ratingModal" class="modal" style="display: none">
+  <div class="modal-content">
+    <span class="close" id="closeRatingModal">&times;</span>
+    <h3 class="rating-title">Rating</h3>
+
+    <form id="ratingForm">
+      <div class="rating-value">
+        <span class="current-rating" id="currentRating">0.0</span>
+        <div class="stars">
+          <input type="radio" name="rating" value="5" id="star5" /><label
+            for="star5"
+            >★</label
+          >
+          <input type="radio" name="rating" value="4" id="star4" /><label
+            for="star4"
+            >★</label
+          >
+          <input type="radio" name="rating" value="3" id="star3" /><label
+            for="star3"
+            >★</label
+          >
+          <input type="radio" name="rating" value="2" id="star2" /><label
+            for="star2"
+            >★</label
+          >
+          <input type="radio" name="rating" value="1" id="star1" /><label
+            for="star1"
+            >★</label
+          >
+        </div>
+      </div>
+      <div class="input-group">
+        <label for="email"></label>
+        <input
+          class="input-email"
+          type="email"
+          name="email"
+          required
+          pattern="^[a-zA-Z0-9_.±]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"
+          placeholder="Email"
+        />
+      </div>
+      <div class="input-group">
+        <label for="description"></label>
+        <textarea
+          id="description"
+          name="description"
+          required
+          placeholder="Your comment"
+        ></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send</button>
+    </form>
+  </div>
+</div>
