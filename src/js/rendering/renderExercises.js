@@ -8,7 +8,7 @@ export function renderExercise(exercise, isFavorite = false) {
     titleAction = `
       <button id="deleteFavorite" class="list-item-header-button-delete" data-id="${exercise._id}">
         <svg class="list-item-header-icon" width="16" height="16">
-          <use href="../img/sprite.svg#icon-trash"></use>
+          <use href="${sprite}#icon-trash"></use>
         </svg>
       </button>
     `;
