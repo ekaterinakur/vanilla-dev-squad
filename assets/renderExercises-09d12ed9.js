@@ -100,4 +100,4 @@ import{a as T,h as O,i as b,b as D}from"./vendor-c65b4e60.js";(function(){const 
       </div>
     </div>
   `}function ve(e){const t=document.getElementById("exercise-list");if(!Array.isArray(e)){console.error("Expected exercises to be an array, but received:",e);return}t.innerHTML=e.map(n=>ae(n)).join(""),document.querySelectorAll(".start-btn").forEach(n=>{n.addEventListener("click",o=>{const i=o.target.dataset.id;ne(i)})})}export{y as F,x as a,fe as b,p as c,ve as d,ge as e,ue as f,de as g,pe as h,me as i,ne as o,ae as r,ee as s,le as t};
-//# sourceMappingURL=renderExercises-7cec0547.js.map
+//# sourceMappingURL=renderExercises-09d12ed9.js.map
