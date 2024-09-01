@@ -1,7 +1,20 @@
 <section class="filter-section">
   <div class="grid-container">
     <div class="main-wrapper">
-      <h2 class="main-title">Exercises</h2>
+      <h2 class="main-title">
+        Exercises 
+        <span id="selected-category"></span>
+      </h2>
+      <div id="search-container" class="hidden">
+        <form id="search-form">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search exercises..."
+          />
+          <button type="submit" id="search-button">Search</button>
+        </form>
+      </div>
       <nav class="main-nav">
         <ul class="nav-list">
           <li class="nav-item">
@@ -38,6 +51,12 @@
     <div class="filter-wrapper">
       <ul class="filter-list"></ul>
       <div class="pagination-section"></div>
+    </div>
+
+    <div class="exercise-wrapper hidden">
+      <div id="exercise-list"></div>
+      <div id="loader" class="hidden">Loading...</div>
+      <div id="pagination-container"></div>
     </div>
 
     <div class="quote">
