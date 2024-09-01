@@ -4,9 +4,6 @@
   color: rgba(36, 36, 36, 0.5);
 }
 
-.category__slash {
-}
-
 .exercise-card-wrapper {
   display: flex;
   align-items: center;
@@ -169,14 +166,18 @@
 
 @media only screen and (min-width: 1440px) {
   .exercise-card {
-    min-width: 440px;
+    min-width: 442px;
   }
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 768px) {
   .exercise-wrapper {
     display: flex;
     flex-direction: column;
     grid-area: filter;
+  }
+
+  #exercise-list {
+    gap: 16px;
   }
 }
