@@ -9,6 +9,7 @@
 @import './filters.css';
 @import './rating.css';
 @import './dialog.css';
+@import './hero.css';
 
 body {
   font-family: var(--main-font-family);
