@@ -1,4 +1,4 @@
-import"./assets/styles-73a474dd.js";let e=JSON.parse(localStorage.getItem("favorites")),s=document.querySelector(".favorites-container");const r="It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future",o=()=>{document.querySelector(".favorites-container-empty")&&document.querySelector(".favorites-container-empty").remove();const i=e.map(t=>`<li class="favorites-container-list-item">
+import"./assets/styles-2224ec19.js";let e=JSON.parse(localStorage.getItem("favorites")),s=document.querySelector(".favorites-container");const r="It appears that you haven't added any exercises to your favorites yet. To get started, you can add exercises that you like to your favorites for easier access in the future",o=()=>{document.querySelector(".favorites-container-empty")&&document.querySelector(".favorites-container-empty").remove();const i=e.map(t=>`<li class="favorites-container-list-item">
       <div class="list-item-header">
         <div class="list-item-header-text-wrapper">
           <p class="list-item-header-text">Workout</p>
