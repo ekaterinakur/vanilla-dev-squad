@@ -11,10 +11,10 @@
 
 .hero__star {
   position: relative;
-  top: 6px;
+  top: 8px;
   height: 38px;
   width: 38px;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
 .hero__title {
