@@ -4,21 +4,21 @@ import{s as e}from"./assets/sprite-a5f6722d.js";let s=JSON.parse(localStorage.ge
           <p class="list-item-header-text">Workout</p>
           <button class="list-item-header-button-delete">
             <svg class="list-item-header-icon" width="16" height="16">
-              <use href=".${e}#icon-trash"></use>
+              <use href="${e}#icon-trash"></use>
             </svg>
           </button>
         </div>
         <button class="list-item-header-button-start">
           <p class="list-item-header-button-text">Start</p>
           <svg class="list-item-header-button-icon" width="13" height="13">
-            <use href=".${e}#icon-arrow"></use>
+            <use href="${e}#icon-arrow"></use>
           </svg>
         </button>
       </div>
       <div class="list-item-content">
         <div class="item-content-icon-wrapper">
           <svg class="item-content-icon" width="14" height="16">
-            <use href=".${e}#icon-running-man"></use>
+            <use href="${e}#icon-running-man"></use>
           </svg>
         </div>
         <p class="item-content-text">${t.name}</p>
