@@ -9,6 +9,7 @@ import {
 } from '../rendering/filtersSection';
 import { getFilters } from '../api/getFilters';
 import { getQuote } from '../api/getQuote';
+import { listTypeVisible } from './exerciseListHandlers';
 
 export const filtersParam = {
   filter: 'Muscles',
@@ -47,6 +48,8 @@ export async function filterQuoteLS() {
 }
 
 export async function filterSizeDepends() {
+  if (listTypeVisible === 'exercises') return;
+
   const windowWidth = window.innerWidth;
   let tempLimit = null;
 
