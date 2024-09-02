@@ -1,10 +1,10 @@
-import { renderExercise } from "./renderExercises";
+import { renderExercise } from './renderExercises';
 
 export const container = document.querySelector('.favorites-container-list');
 
-export const renderFavoritesList = (favorites) => {
+export const renderFavoritesList = favorites => {
   const markup = favorites
-    .map((exercise) => renderExercise(exercise, true))
+    .map(exercise => renderExercise(exercise, true))
     .join('');
 
   container.innerHTML = markup;
@@ -34,14 +34,14 @@ export function renderPagination(num) {
 }
 
 export function clearPagination() {
-  filterBtns.innerHTML = "";
+  filterBtns.innerHTML = '';
 }
 
 export function updatePaginationView(button) {
   const filterPaginationBtn = filterBtns.querySelectorAll('.pagination-btn');
   filterPaginationBtn.forEach(btn => btn.classList.remove('active'));
   button.classList.add('active');
-  const filterWrapper = document.querySelector('.main-title');
+  const filterWrapper = document.querySelector('.favorites-container-list');
   window.scrollTo({
     top: filterWrapper.offsetTop,
     behavior: 'smooth',
