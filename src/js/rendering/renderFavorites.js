@@ -18,3 +18,28 @@ export const renderFavoritesEmpty = () => {
 		</p>
 	`;
 };
+
+const filterBtns = document.querySelector('.pagination-section');
+
+export function renderPagination(num) {
+  let buttonsHTML = '';
+  for (let i = 1; i <= num; i++) {
+    buttonsHTML += `
+      <button type="button" class="pagination-btn untreated${
+        i === 1 ? ' active' : ''
+      }" data-page=${i}>${i}</button>
+    `;
+  }
+  filterBtns.insertAdjacentHTML('beforeend', buttonsHTML);
+}
+
+export function updatePaginationView(button) {
+  const filterPaginationBtn = filterBtns.querySelectorAll('.pagination-btn');
+  filterPaginationBtn.forEach(btn => btn.classList.remove('active'));
+  button.classList.add('active');
+  const filterWrapper = document.querySelector('.main-title');
+  window.scrollTo({
+    top: filterWrapper.offsetTop,
+    behavior: 'smooth',
+  });
+}
