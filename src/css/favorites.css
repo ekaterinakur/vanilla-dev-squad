@@ -372,6 +372,11 @@
     height: 141px;
   }
 
+  .favorites-container-list {
+    max-height: 470px;
+    overflow-y: auto;
+  }
+
   .favorites-container-list-item {
     max-width: 405px;
   }

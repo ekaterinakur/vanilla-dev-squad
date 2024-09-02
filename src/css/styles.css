@@ -20,7 +20,7 @@ body {
   background-color: var(--primary-light);
   line-height: 1.125;
   overflow-x: hidden;
-  height: 100vh;
+  scrollbar-width: none;
 }
 
 html {
