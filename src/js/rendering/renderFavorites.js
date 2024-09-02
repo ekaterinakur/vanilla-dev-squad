@@ -30,7 +30,11 @@ export function renderPagination(num) {
       }" data-page=${i}>${i}</button>
     `;
   }
-  filterBtns.insertAdjacentHTML('beforeend', buttonsHTML);
+  filterBtns.innerHTML = buttonsHTML;
+}
+
+export function clearPagination() {
+  filterBtns.innerHTML = "";
 }
 
 export function updatePaginationView(button) {

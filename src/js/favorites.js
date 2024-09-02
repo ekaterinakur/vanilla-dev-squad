@@ -10,6 +10,7 @@ filterPagination.addEventListener('click', handleFiltersPagination);
 window.addEventListener('resize', () => {
   // Header Listening for window resize events - hide burger menu on larger screens
   toggleHeaderEventListeners();
+  initFavorites();
 });
 
 toggleHeaderEventListeners();

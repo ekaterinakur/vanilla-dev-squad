@@ -1,3 +1,8 @@
+.favorites.container {
+  padding-top: 3.75rem;
+  padding-bottom: 3.75rem;
+}
+
 .favorites .main-title {
   margin-bottom: 1.5rem;
 }
@@ -6,7 +11,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
 }
 
 .favorites-container-wrapper {
@@ -16,6 +20,7 @@
   justify-content: center;
   gap: 20px;
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .favorites-container-wrapper .quote {
@@ -135,13 +140,6 @@
   flex-direction: column;
   gap: 20px;
   width: 100%;
-}
-
-@media screen and (min-width: 1440px) {
-  .favorites-container-list {
-    max-height: 487px;
-    overflow: scroll;
-  }
 }
 
 .favorites-container-list-item {
@@ -275,12 +273,14 @@
 }
 
 @media screen and (min-width: 768px) {
-  .favorites-container {
-    gap: 64px;
+  .favorites.container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .favorites-container-wrapper {
     gap: 16px;
+    margin-bottom: 64px;
   }
 
   .favorites-container-quote {
@@ -353,6 +353,11 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .favorites.container {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
   .favorites-container {
     flex-direction: row;
     align-items: flex-start;
