@@ -1,4 +1,4 @@
-import{r as d,o as l,F as u,t as c,f}from"./assets/filtersHandlers-84b2551c.js";import"./assets/vendor-c65b4e60.js";const s=document.querySelector(".favorites-container-list"),v=o=>{const r=o.map(t=>d(t,!0)).join("");s.innerHTML=r},p=()=>{s.innerHTML=`
+import{r as d,o as l,F as u,t as c,f}from"./assets/filtersHandlers-e7a038db.js";import"./assets/vendor-c65b4e60.js";const s=document.querySelector(".favorites-container-list"),v=o=>{const r=o.map(t=>d(t,!0)).join("");s.innerHTML=r},p=()=>{s.innerHTML=`
 		<p class="favorites-container-empty">
 			It appears that you haven't added any exercises to your favorites yet. 
 			To get started, you can add exercises that you like to your favorites for easier access in the future.
