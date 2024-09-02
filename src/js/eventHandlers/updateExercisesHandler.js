@@ -4,6 +4,7 @@ import { renderPagination } from '../rendering/renderPagination';
 
 export async function updateExercises({
   currentPage,
+  pageLimit,
   currentBodypart,
   currentMuscles,
   currentEquipment,
@@ -14,7 +15,7 @@ export async function updateExercises({
   try {
     const response = await fetchExercisesHandler({
       page: currentPage,
-      limit: 8,
+      limit: pageLimit,
       bodypart: currentBodypart || undefined,
       muscles: currentMuscles || undefined,
       equipment: currentEquipment || undefined,
@@ -25,6 +26,7 @@ export async function updateExercises({
       totalPages = response.totalPages;
       renderPagination({
         currentPage,
+			  pageLimit,
         totalPages,
         paginationContainer,
         updateExercises,
