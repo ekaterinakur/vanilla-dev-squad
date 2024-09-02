@@ -9,8 +9,8 @@
     
     <script type="module" crossorigin src="/vanilla-dev-squad/commonHelpers2.js"></script>
     <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/vendor-c65b4e60.js">
-    <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/filtersHandlers-0443de3c.js">
-    <link rel="stylesheet" href="/vanilla-dev-squad/assets/filtersHandlers-acdc9160.css">
+    <link rel="modulepreload" crossorigin href="/vanilla-dev-squad/assets/filtersHandlers-daa14df6.js">
+    <link rel="stylesheet" href="/vanilla-dev-squad/assets/filtersHandlers-b1d96b8f.css">
   </head>
   <body>
     <header>
@@ -40,11 +40,8 @@
     <!-- Оверлей для блокування кліків -->
     <div class="overlay"></div>
 
-    <div class="header-mobile-menu js-header-menu">
-      <button
-        class="close-menu-btn js-toggle-menu-btn"
-        aria-label="Close menu"
-      >
+    <div id="mobile-menu" class="header-mobile-menu js-header-menu">
+      <button class="close-menu-btn js-toggle-menu-btn" aria-label="Close menu">
         <svg class="close-menu-icon" width="32" height="32">
           <use href="/vanilla-dev-squad/assets/sprite-45ef4b9c.svg#icon-close"></use>
         </svg>
@@ -243,7 +240,7 @@
             <label class="search-label">
               <input type="text" id="search-input" placeholder="Search" />
             </label>
-            <button type="click" id="search-button">
+            <button type="submit" id="search-button">
               <svg class="burger-menu-icon" width="18" height="18">
                 <use href="/vanilla-dev-squad/assets/sprite-45ef4b9c.svg#search"></use>
               </svg>
