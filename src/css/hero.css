@@ -74,7 +74,8 @@
 
 .hero__teg-buttons__bottom {
   display: flex;
-  gap: 8px;
+  flex-wrap: wrap;
+  gap: 6px;
   justify-content: center;
 }
 
