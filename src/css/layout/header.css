@@ -1,8 +1,13 @@
+header {
+  position: relative;
+}
+
 .header.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
 }
 
 .header-logo-img {

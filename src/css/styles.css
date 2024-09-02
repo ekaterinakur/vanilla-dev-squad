@@ -20,6 +20,7 @@ body {
   background-color: var(--primary-light);
   line-height: 1.125;
   overflow-x: hidden;
+  height: 100vh;
 }
 
 html {
@@ -28,9 +29,9 @@ html {
 
 .container {
   width: 100%;
-  max-width: var(--container-max-width);
+  max-width: calc(var(--container-max-width) + var(--main-padding) * 2);
   margin: 0 auto;
-  padding: var(--main-padding);
+  padding: 0 var(--main-padding);
 }
 
 .section {
