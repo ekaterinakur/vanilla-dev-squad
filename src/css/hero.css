@@ -1,5 +1,5 @@
 .hero-section {
-  padding-top: 2rem;
+  padding-top: 60px;
   padding-bottom: 2.5rem;
 }
 
@@ -103,7 +103,7 @@
 
 @media screen and (min-width: 768px) {
   .hero-section {
-    padding-top: 2.5rem;
+    padding-top: 84px;
     padding-bottom: 2.5rem;
   }
 
