@@ -290,20 +290,7 @@
   position: relative;
   border-radius: 20px;
   display: flex;
-  min-height: 209px;
   margin-top: 80px;
-}
-
-@media only screen and (min-width: 768px) {
-  .quote {
-    min-height: 249px;
-  }
-}
-
-@media only screen and (min-width: 1440px) {
-  .quote {
-    min-height: 242px;
-  }
 }
 
 .quote-icon.left-icon {
@@ -403,6 +390,7 @@
 .daily-text {
   margin-top: 16px;
   font-size: 14px;
+  line-height: 1.125rem;
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
