@@ -20,11 +20,11 @@ body {
   background-color: var(--primary-light);
   line-height: 1.125;
   overflow-x: hidden;
-  scrollbar-width: none;
 }
 
 html {
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 .container {
