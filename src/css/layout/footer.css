@@ -218,13 +218,13 @@
   border-color: orange;
 }
 
-.subscribe__form-input:invalid {
+/* .subscribe__form-input:invalid {
   border-color: #ee323d;
 }
 
 .subscribe__form-input:valid {
   border-color: #4dc274;
-}
+} */
 
 @media screen and (min-width: 768px) {
   .subscribe__form-input {

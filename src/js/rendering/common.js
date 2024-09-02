@@ -25,7 +25,7 @@ export function hideLoader() {
 export function showNotification(message) {
   iziToast.success({
     message,
-    backgroundColor: '#0C7611',
+    backgroundColor: '#4DC274',
   });
 }
 
