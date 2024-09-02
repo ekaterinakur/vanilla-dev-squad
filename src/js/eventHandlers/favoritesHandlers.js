@@ -11,7 +11,7 @@ import { openExerciseDialog, FAVORITES_KEY_LS } from './exerciseHandlers.js';
 const imagesList = document.querySelector('.favorites-container-list');
 let favorites = [];
 let currentPageNumber = 1;
-const itemsPerPage = 8;
+let itemsPerPage;
 
 export function initFavorites(shouldUpdatePagination = true) {
   favorites = JSON.parse(localStorage.getItem(FAVORITES_KEY_LS));
@@ -20,9 +20,16 @@ export function initFavorites(shouldUpdatePagination = true) {
     if (window.innerWidth >= 1440) {
       renderFavoritesList(favorites);
       shouldUpdatePagination && clearPagination();
-    } else {
+    } else if (window.innerWidth < 768) {
+      itemsPerPage = 8;
       renderFavoritesList(renderPage(currentPageNumber));
-      shouldUpdatePagination && renderPagination(Math.ceil(favorites.length / 8));
+      shouldUpdatePagination &&
+        renderPagination(Math.ceil(favorites.length / itemsPerPage));
+    } else {
+      itemsPerPage = 10;
+      renderFavoritesList(renderPage(currentPageNumber));
+      shouldUpdatePagination &&
+        renderPagination(Math.ceil(favorites.length / itemsPerPage));
     }
 
     initFavoritesListeners();
@@ -88,7 +95,7 @@ function renderPage(pageNumber) {
   if (startIndex > favorites.length - 1) {
     currentPageNumber = pageNumber = pageNumber - 1;
     startIndex = (currentPageNumber - 1) * itemsPerPage;
-    renderPagination(Math.ceil(favorites.length / 8));
+    renderPagination(Math.ceil(favorites.length / itemsPerPage));
   }
   const endIndex = startIndex + itemsPerPage;
   const currentPageItems = favorites.slice(startIndex, endIndex);
