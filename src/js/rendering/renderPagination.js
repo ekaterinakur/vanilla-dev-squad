@@ -1,5 +1,6 @@
 export function renderPagination({
   currentPage,
+  pageLimit,
   totalPages,
   paginationContainer,
   updateExercises,
@@ -37,6 +38,7 @@ export function renderPagination({
     pageButton.addEventListener('click', () => {
       updateExercises({
         currentPage: i,
+			  pageLimit,
         currentBodypart,
         currentMuscles,
         currentEquipment,

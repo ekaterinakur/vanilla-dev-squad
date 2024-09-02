@@ -188,6 +188,10 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.filter-btn:hover {
+  cursor: pointer;
+}
+
 .filter-btn:hover .filter-img,
 .filter-btn:focus .filter-img {
   transform: scale(1.05);
