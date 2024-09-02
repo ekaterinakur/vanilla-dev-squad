@@ -19,7 +19,7 @@ export function initExercises() {
   pageLimit = window.innerWidth > 767 ? 10 : 8;
 
   filterList.addEventListener('click', event => {
-    listTypeVisible = 'excercises';
+    listTypeVisible = 'exercises';
 
     const result = handleCategoryClick({
       event,
@@ -71,7 +71,7 @@ export function initExercises() {
       if (filterWrapper) {
         filterWrapper.classList.remove('hidden');
       }
-			
+
       // Скрываем строку поиска
       const searchContainer = document.getElementById('search-container');
       if (searchContainer) {
@@ -100,7 +100,7 @@ export async function exercisesSizeDepends() {
   }
 
   if (limit !== pageLimit) {
-    resetFilterView(true);
+		const paginationContainer = document.getElementById('pagination-container');
     currentPage = 1;
     pageLimit = limit;
 
