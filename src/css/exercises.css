@@ -97,6 +97,7 @@
 .exercise-card-info {
   display: flex;
   gap: 10px;
+  text-transform: capitalize;
 }
 
 .exercise-card-info-cal {
